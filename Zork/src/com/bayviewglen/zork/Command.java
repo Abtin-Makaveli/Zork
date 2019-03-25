@@ -1,5 +1,5 @@
 package com.bayviewglen.zork;
-/**
+/**blyat
  * Class Command - Part of the "Zork" game.
  * 
  * author:  Michael Kolling
