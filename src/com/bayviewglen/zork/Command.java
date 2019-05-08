@@ -5,7 +5,7 @@ package com.bayviewglen.zork;
  * author:  Michael Kolling
  * version: 1.0
  * date:    July 1999
- * test
+ * test2
  * This class holds information about a command that was issued by the user.
  * A command currently consists of two strings: a command word and a second
  * word (for example, if the command was "take map", then the two strings
