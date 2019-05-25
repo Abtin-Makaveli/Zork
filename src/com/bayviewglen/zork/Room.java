@@ -1,4 +1,3 @@
-//git push test
 package com.bayviewglen.zork;
 /*
  * Class Room - a room in an adventure game.
