@@ -5,5 +5,25 @@ Room Name: Your Washroom
 Room Description:  You are in a washroom, the door in front of you leads back to your room.
 Exit Rooms: Your Room
 Room Name: U-Hallway
-Room Description:  You are in the upstairs hallway, there's a closed door in front of you, behind you, you can see the door to the office is open. The door to your left leads back to your room. There's a stairway leading downstairs to your right.
+Room Description:You are in the upstairs hallway, there's a closed door in front of you, behind you, you can see the door to the office is open. The door to your left leads back to your room. There's a stairway leading downstairs to your right.
 Exit Rooms: Your Room, Parent's Room, U-Office, M-Hallway
+Room Name: Parent's Room 
+Room Description: You are in your parents bedroom, there is a latter leading to a trap door on top of you, to your left there is your parents washroom. THe door behind you leads back to the upper hallway. 
+Exit Rooms: U-Hallway
+Room Name:Guest Room
+Room Description: There are no other doors in the room. A wooden cupboard sitting in the left side of the room. THe door behind you leads back to the hallway.
+Exit Rooms: U-Hallway
+Room Name: Upper Office
+Room Description: The room is dark, there is one desk with two drawers sitting in the middle of the room. The room in front of you leads back to the hallway.
+Exit Rooms: U-Hallway
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+
+
+
+
+
+
