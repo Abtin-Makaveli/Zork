@@ -1,9 +1,58 @@
-Room Name: Room 1
-Room Description:  This is room<br>1
-Exit Rooms: E-Room 2
-Room Name: Room 2
-Room Description:  This is Room 2
-Exit Rooms: W-Room 1, U-Room 3
-Room Name: Room 3
-Room Description:  You are upstairs.
-Exit Rooms: D-Room 2
+Room Name: Your Bedroom
+Room Description:  You walk into your bedroom...
+Exit Rooms: Your Washroom, First Floor Hallway
+Room Name: Your Washroom
+Room Description: You walk into your Washroom...
+Exit Rooms: Your Bedroom
+Room Name: First Floor Hallway
+Room Description:  You are in the first floor hallway
+Exit Rooms: Parents room, Your Bedroom, Down stairs Stairs, Floor one office
+Room Name: Parents room
+Room Description: You are in your parents room  
+Exit Rooms: Parents Washroom, Parents Attic, Hallway
+Room Name: Parents Washroom
+Room Description:You are in your parents washroom
+Exit Rooms: Parents bedroom
+Room Name: Downstairs stairs
+Room Description:  You are on the downstairs staircase
+Exit Rooms: 
+
+Room Name: Kitchen
+Room Description: You are in the kitchen 
+Exit Rooms: living room, downstairs hallway
+Room Name: Living room
+Room Description:  You are in the living room
+Exit Rooms: front door, downstairs hallway
+
+
+Room Name: Basement office
+Room Description:  You are in the basement office
+Exit Rooms: ??, basement hallway
+Room Name: wine cellar
+Room Description:  you are in the wine cellar room
+Exit Rooms: basment hallway
+Room Name: electrical room
+Room Description:  you are in the electrical room
+Exit Rooms: basement hallway
+Room Name: Laundry room
+Room Description:  you are in the laundry room
+Exit Rooms: basement hallway
+
+Room Name: Garage
+Room Description: you are in the garage  
+Exit Rooms: street, 
+Room Name: stree
+Room Description: you are out in the street  
+Exit Rooms: garage, backyard
+Room Name: backyard
+Room Description: you are in the backryard
+Exit Rooms: neighbors house, shed
+Room Name: neighbors house
+Room Description:  you are at your neighbors house
+Exit Rooms: backyard
+Room Name: Shed
+Room Description: you are at your shed  
+Exit Rooms: doghouse, backyard
+Room Name: you are at your doghouse
+Room Description: you are at your doghouse
+Exit Rooms: shed
