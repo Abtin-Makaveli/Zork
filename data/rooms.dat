@@ -16,9 +16,10 @@ Exit Rooms: U-Hallway
 Room Name: Upper Office
 Room Description: The room is dark, there is one desk with two drawers sitting in the middle of the room. The room in front of you leads back to the hallway.
 Exit Rooms: U-Hallway
-Room Name: 
-Room Description:
-Exit Rooms:
+Room Name: Downstairs Hallway
+Room Description: The door way in front of you leads to the Garage. The room to your right leads to your living room. The kitchen is behind you. 
+Exit Rooms: U-Hallway
+
 
 
 
