@@ -55,6 +55,22 @@ Room Name: Laundry Room
 Room Description: You are in the Laundry Room. the place where clothes are washed. The door in front of you leads to the basement hallway.
 Exit Rooms: Basement Hallway.
 
+Room Name: Street
+Room Description: You are now in the street. To your right is a dark eerie forest. Behind you is your backyard. 
+Exit Rooms: Garage
+
+Room Name: Back Yard
+Room Description: You are in your backyard. To the left of your yard is your neighbors house. Behind you is a wooden shed. To your left is a dog house. 
+Exit Rooms: Street
+
+Room Name: Shed
+Room Description: You are in the Shed. Exit and you will return to the backyard.
+Exit Rooms: Back yard
+
+Room Name: Dog House
+Room Description: You are in the Dog House. Exiting will take yu back to the backyard.
+Exit Rooms: Backyard
+
 
 
 
