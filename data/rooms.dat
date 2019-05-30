@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Room Name: Your Room
 Room Description:  You are in your room, there's a window thats slightly opened to your left, on your opposite side there's an open door leading to a hallway. There is a door behind leading to your washroom.
 Exit Rooms: E-Your Washroom, U-Hallway
@@ -7,15 +8,91 @@ Exit Rooms: W-Your Room
 Room Name: Hallway
 Room Description:You are in the upstairs hallway, there's a closed door in front of you, behind you, you can see the door to the office is open. The door to your left leads back to your room. There's a stairway leading downstairs to your right.
 Exit Rooms: E-Your Room, S-Parent's Room, U-Office, D-Hallway
+=======
+<<<<<<< HEAD
+Room Name: Your Bedroom
+Room Description:  You are in your room.<br> There's a window thats slightly opened to your left, <br>on your opposite side there's an open door leading to a hallway. <br>There is a door behind leading to your washroom.
+Exit Rooms: Your Washroom, U-Hallway
+
+Room Name: Your Bathroom
+Room Description: You are in a bathroom.<br> The door in front of you leads back to your bedroom.
+Exit Rooms: Your Room
+
+Room Name: U-Hallway
+Room Description: You are in the upstairs hallway.<br> There's a closed door in front of you. <br> Behind you, you can see the door to the office is open. <br>The door to your left leads back to your room. <br>There's a stairway leading downstairs to your right if you wish to proceed.
+Exit Rooms: Your Room, Parent's Room, U-Office, M-Hallway
+
+>>>>>>> refs/remotes/origin/master
 Room Name: Parent's Room 
-Room Description: You are in your parents bedroom, there is a latter leading to a trap door on top of you, to your left there is your parents washroom. THe door behind you leads back to the upper hallway. 
+Room Description: You are in your Parent's bedroom.<br>There's a ladder leading to a trap door on top of you. <br> To your left there is your parents bathroom. <br>The door behind you leads back to the upper hallway. 
 Exit Rooms: U-Hallway
+
 Room Name:Guest Room
-Room Description: There are no other doors in the room. A wooden cupboard sitting in the left side of the room. THe door behind you leads back to the hallway.
+Room Description: You are in the Guest Room.<br>There are no other doors in the room. <br>There is a wooden cupboard sitting in the left side of the room. <br>The door behind you leads back to the hallway.
 Exit Rooms: U-Hallway
+
 Room Name: Upper Office
-Room Description: The room is dark, there is one desk with two drawers sitting in the middle of the room. The room in front of you leads back to the hallway.
+Room Description: You are in the Upper Hallway.<br> The room is dark; <br>There's one desk with two drawers sitting in the middle of the room. <br>The room in front of you leads back to the hallway.
 Exit Rooms: U-Hallway
+
 Room Name: Downstairs Hallway
-Room Description: The door way in front of you leads to the Garage. The room to your right leads to your living room. The kitchen is behind you. 
+Room Description: You are in the Downstairs Hallway.<br> The door way in front of you leads to the Garage.<br> The room to your right leads to your living room. <br>The Kitchen is behind you. 
 Exit Rooms: U-Hallway
+<<<<<<< HEAD
+=======
+
+Room Name: Kitchen
+Room Description: You are in the Kitchen.<br> The doorway in front of you leads back to the downstairs hallway.
+Exit Rooms: Downstairs Hallway
+
+Room Name: Garage
+Room Description: You are in the Garage.<br> Behind you is the door back to the Downstairs Hallway. <br>There is a Garage door that is closed.
+Exit Rooms: Downstairs Hallway
+
+Room Name: Basement Hallway
+Room Description: You are in the Basement.<br> In from of you is a door leading to the Basement Office.<br> To your right is the Wine Cellar. the room on your left is the electric room.<br> The laundry room is in the door behind you. 
+Exit Rooms: Downstairs Hallway
+
+Room Name: Basement Office
+Room Description: You are in the Basement Office. <br>The door behind you leads back to the Basement Hallway.
+Exit Rooms: Basement Hallway
+
+Room Name: Electric Room
+Room Description: You are in the Electric Room.<br>The door to your right leads back to the Basement Hallway.
+Exit Rooms: Basement Hallway
+
+Room Name: Wine Cellar
+Room Description: You are in a drunk place.<br>The door to your left leads back to the Basement Hallway.
+Exit Rooms: Basement Hallway
+
+Room Name: Laundry Room
+Room Description: You are in the Laundry Room.<br>The place where clothes are washed.<br> From what you can see, there's a Washing Machine, and a Dryer, alongside some clothes on top.<br> The door in front of you leads to the basement hallway.
+Exit Rooms: Basement Hallway.
+
+Room Name: Street
+Room Description: You are now in the street. <br>To your right is a dark eerie forest. <br>Behind you is your backyard. 
+Exit Rooms: Garage
+
+Room Name: Back Yard
+Room Description: You are in your backyard. <br>To the left of your yard is your neighbors house. <br>Behind you is a wooden shed. To your left is a dog house. 
+Exit Rooms: Street
+
+Room Name: Shed
+Room Description: You are in the Shed. <br>Exit and you will return to the backyard.
+Exit Rooms: Back yard
+
+Room Name: Dog House
+Room Description: You are in the Dog House. <br>Exiting will take you back to the backyard.
+Exit Rooms: Backyard
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> refs/remotes/origin/master
