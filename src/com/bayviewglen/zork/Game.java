@@ -97,7 +97,6 @@ class Game
 			playerInventory = new Inventory(50);
 			currentRoom.getRoomInventory().addToInventory(new Item("Hammer", 5));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         parser = new Parser();
