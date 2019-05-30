@@ -25,6 +25,8 @@ class Game
 {
     private Parser parser;
     private Room currentRoom;
+    private Inventory playerInventory;
+    
     // This is a MASTER object that contains all of the rooms and is easily accessible.
     // The key will be the name of the room -> no spaces (Use all caps and underscore -> Great Room would have a key of GREAT_ROOM
     // In a hashmap keys are case sensitive.
@@ -91,7 +93,9 @@ class Game
     public Game() {
         try {
 			initRooms("data/Rooms.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
+			currentRoom = masterRoomMap.get("YOUR_ROOM");
+			playerInventory = new Inventory(50);
+			currentRoom.getRoomInventory().addToInventory(new Item("Hammer", 5));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

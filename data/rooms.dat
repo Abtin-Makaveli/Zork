@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 Room Name: Your Room
 Room Description:  You are in your room, there's a window thats slightly opened to your left, on your opposite side there's an open door leading to a hallway. There is a door behind leading to your washroom.
-Exit Rooms: Your Washroom, U-Hallway
+Exit Rooms: E-Your Washroom, U-Hallway
 Room Name: Your Washroom
 Room Description:  You are in a washroom, the door in front of you leads back to your room.
-Exit Rooms: Your Room
-Room Name: U-Hallway
+Exit Rooms: W-Your Room
+Room Name: Hallway
 Room Description:You are in the upstairs hallway, there's a closed door in front of you, behind you, you can see the door to the office is open. The door to your left leads back to your room. There's a stairway leading downstairs to your right.
-Exit Rooms: Your Room, Parent's Room, U-Office, M-Hallway
+Exit Rooms: E-Your Room, S-Parent's Room, U-Office, D-Hallway
 Room Name: Parent's Room 
 Room Description: You are in your parents bedroom, there is a latter leading to a trap door on top of you, to your left there is your parents washroom. THe door behind you leads back to the upper hallway. 
 Exit Rooms: U-Hallway
@@ -20,14 +19,3 @@ Exit Rooms: U-Hallway
 Room Name: Downstairs Hallway
 Room Description: The door way in front of you leads to the Garage. The room to your right leads to your living room. The kitchen is behind you. 
 Exit Rooms: U-Hallway
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> refs/remotes/origin/master

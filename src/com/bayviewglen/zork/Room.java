@@ -22,6 +22,7 @@ class Room {
 	private String roomName;
 	private String description;
 	private HashMap<String, Room> exits; // stores exits of this room.
+	private Inventory roomInventory;
 
 	/**
 	 * Create a room described "description". Initially, it has no exits.
@@ -30,6 +31,7 @@ class Room {
 	public Room(String description) {
 		this.description = description;
 		exits = new HashMap<String, Room>();
+		roomInventory = new Inventory();
 	}
 
 	public Room() {
@@ -37,6 +39,11 @@ class Room {
 		roomName = "DEFAULT ROOM";
 		description = "DEFAULT DESCRIPTION";
 		exits = new HashMap<String, Room>();
+		roomInventory = new Inventory();
+	}
+
+	public Inventory getRoomInventory() {
+		return roomInventory;
 	}
 
 	public void setExit(char direction, Room r) throws Exception {
@@ -102,7 +109,8 @@ class Room {
 	 */
 	public String longDescription() {
 
-		return "Room: " + roomName + "\n\n" + description + "\n" + exitString();
+		return "Room: " + roomName + "\n\n" + description + "\n" + exitString() + "\nIn the room is the following: "
+		 + roomInventory.toString();
 	}
 
 	/**
