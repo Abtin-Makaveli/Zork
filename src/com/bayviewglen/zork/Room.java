@@ -109,7 +109,7 @@ class Room {
 	 */
 	public String longDescription() {
 
-		return "Room: " + roomName + "\n\n" + description + "\n" + exitString() + "\nIn the room is the following: "
+		return description + "\nIn the room you see the following: "
 		 + roomInventory.toString();
 	}
 
