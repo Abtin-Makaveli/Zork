@@ -5,14 +5,14 @@ Room Name: Your Washroom
 Room Description:You are in a washroom, the door in front of you leads back to your room.
 Exit Rooms: N-Your Room
 Room Name: F2Hallway
-Room Description:You are in the upstairs hallway, there's a closed door in front of you, behind you, you can see the door to the office is open. The door to your left leads back to your room. There's a stairway leading downstairs to your right.
-Exit Rooms: E-Your Room, S-Parent's Room, U-Office, D-Hallway
+Room Description:You are in the upstairs hallway, there's a closed door in front of you,<br>behind you, you can see the door to the office is open.<br>The door to your left leads back to your room.<br>There's a stairway leading downstairs to your right.
+Exit Rooms: W-Your Room, S-Parent's Room, N-Parent's Room, E-F1Hallway
 Room Name: Parent's Room
-Room Description:You are in your parents bedroom, the door to your left leads to your parents washroom, <br> there is an old cabinet to the east.
-Exit Rooms: S-F2Hallway, W-Parent's Washroom, N-Attic.
+Room Description:You are in your parents bedroom, the door to your left leads to your parents washroom,<br>there is an old cabinet to your left.<br>You notice a trapdoor leading up.
+Exit Rooms: S-F2Hallway, W-Parent's Washroom, U-Attic
 Room Name: Parent's Washroom
-Room Description:You are in your parent's washroom, there is a trapdoor leading up.
-Exit Rooms: E-Parent's Bedroom.
+Room Description:You are in your parent's washroom. The sink is broken.
+Exit Rooms: E-Parent's Bedroom
 Room Name: Attic
 Room Description:You are in the attic, the trapdoor below you leads back to parent's bedroom.
-Exit Rooms: S-Parent's Washroom.
+Exit Rooms: D-Parent's Room
