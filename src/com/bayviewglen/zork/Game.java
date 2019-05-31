@@ -181,158 +181,21 @@ class Game {
 		String direction = command.getSecondWord();
 // Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
-		if (nextRoom == null)
+		if (nextRoom == null) {
 			System.out.println("There's nothing that way!");
-		else {
+		} else if (currentRoom.isStairs(currentRoom, currentRoom.nextRoom(direction))) {
 			currentRoom = nextRoom;
-			doorAnimation();
+			Animation.stairAnimation();
+			System.out.println(currentRoom.longDescription());
+		} else {
+			currentRoom = nextRoom;
+			Animation.doorAnimation();
 			System.out.println(currentRoom.longDescription());
 		}
 	}
-	
+
 	private void look() {
 		System.out.println(currentRoom.longDescription());
-	}
-	
-	private void doorAnimation() {
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-
-		System.out.println(" ______________");
-		System.out.println("|\\ ___________ /|");
-		System.out.println("| |  _ _ _ _  | |");
-		System.out.println("| | | | | | | | |");
-		System.out.println("| | |-+-+-+-| | |");
-		System.out.println("| | |-+-+=+%| | |");
-		System.out.println("| | |_|_|_|_| | |");
-		System.out.println("| |    ___    | |");
-		System.out.println("| |   [___] ()| |");
-		System.out.println("| |         ||| |");
-		System.out.println("| |         ()| |");
-		System.out.println("| |           | |");
-		System.out.println("| |           | |");
-		System.out.println("| |           | |");
-		System.out.println("|_|___________|_|");
-
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-
-		System.out.println(" ______________");
-		System.out.println("|\\ ___________ /|");
-		System.out.println("| |  /|,| |   | |");
-		System.out.println("| | |,x,| |   | |");
-		System.out.println("| | |,x,' |   | |");
-		System.out.println("| | |,x   ,   | |");
-		System.out.println("| | |/    |   | |");
-		System.out.println("| |    /] ,   | |");
-		System.out.println("| |   [/ ()   | |");
-		System.out.println("| |       |   | |");
-		System.out.println("| |       |   | |");
-		System.out.println("| |       |   | |");
-		System.out.println("| |      ,'   | |");
-		System.out.println("| |   ,'      | |");
-		System.out.println("|_|,'_________|_|");
-		
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
 	}
 
 }
