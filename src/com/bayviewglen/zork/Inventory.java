@@ -41,6 +41,10 @@ public class Inventory {
 		return items.containsKey(itemName);
 	}
 	
+	public int numberOfItems() {
+		return items.size();
+	}
+	
 	public String toString() {
 		String temp = "";
 		for (String key : items.keySet()) {

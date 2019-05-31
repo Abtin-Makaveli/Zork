@@ -95,7 +95,7 @@ class Game {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("YOUR_ROOM");
 			playerInventory = new Inventory(50);
-			currentRoom.getRoomInventory().addToInventory(new Item("Hammer", 5));
+			//currentRoom.getRoomInventory().addToInventory(new Item());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
