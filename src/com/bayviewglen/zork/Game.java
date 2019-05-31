@@ -95,7 +95,7 @@ class Game {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("YOUR_ROOM");
 			playerInventory = new Inventory(50);
-			//currentRoom.getRoomInventory().addToInventory(new Item());
+			currentRoom.getRoomInventory().addToInventory(new Item("fleshlight", 3));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -151,6 +151,8 @@ class Game {
 				return true; // signal that we want to quit
 		} else if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
+		} else if (commandWord.equals("look")) {
+			look();
 		}
 		return false;
 	}
@@ -204,7 +206,11 @@ class Game {
 	}
 
 	private void look() {
-		System.out.println(currentRoom.longDescription());
+		System.out.println("\n" + currentRoom.longDescription());
+	}
+	
+	private void take(Room currentRoom, ) {
+		System.out.println("\n You took the " + currentRoom.getRoomInventory());
 	}
 
 }
