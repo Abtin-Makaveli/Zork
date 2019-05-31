@@ -100,7 +100,7 @@ class Room {
 	 * constructor).
 	 */
 	public String shortDescription() {
-		return "Room: " + roomName + "\n\n" + description;
+		return "Room: " + roomName;
 	}
 
 	/**
@@ -109,7 +109,7 @@ class Room {
 	 */
 	public String longDescription() {
 
-		return description + "\nIn the room you see the following: "
+		return description + "\n\nIn the room you see the following:\n"
 		 + roomInventory.toString();
 	}
 
