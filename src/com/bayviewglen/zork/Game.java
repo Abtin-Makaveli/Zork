@@ -187,6 +187,10 @@ class Game {
 			currentRoom = nextRoom;
 			Animation.stairAnimation();
 			System.out.println(currentRoom.longDescription());
+		} else if (currentRoom.nextRoom(direction).getRoomName().equals("Attic")) {
+			currentRoom = nextRoom;
+			Animation.atticAnimation();
+			System.out.println(currentRoom.longDescription());
 		} else {
 			currentRoom = nextRoom;
 			Animation.doorAnimation();
