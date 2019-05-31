@@ -148,4 +148,11 @@ class Room {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	public boolean isStairs(Room currentRoom, Room nextRoom) {
+		if (currentRoom.getRoomName().contains("hallway") && nextRoom.getRoomName().contains("hallway")) {
+			return true;
+		}
+		return false;
+	}
 }
