@@ -5,7 +5,7 @@ public class Animation {
 	private static String lastRefresh = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 	public static void doorAnimation() {
 		try {
-			Thread.sleep(500);
+			Thread.sleep(750);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -29,7 +29,7 @@ public class Animation {
 		System.out.println("|_|___________|_|");
 
 		try {
-			Thread.sleep(500);
+			Thread.sleep(750);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -53,7 +53,7 @@ public class Animation {
 		System.out.println("|_|,'_________|_|");
 		
 		try {
-			Thread.sleep(500);
+			Thread.sleep(750);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -63,7 +63,7 @@ public class Animation {
 	
 	public static void stairAnimation() {
 		try {
-			Thread.sleep(500);
+			Thread.sleep(750);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -103,7 +103,7 @@ public class Animation {
 				"                    []________|_!\r\n" + 
 				"  __________________[]__________|____________________");
 		try {
-			Thread.sleep(500);
+			Thread.sleep(750);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -132,7 +132,7 @@ public class Animation {
 				"        \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"");
 		
 		try {
-			Thread.sleep(500);
+			Thread.sleep(750);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -173,7 +173,7 @@ public class Animation {
 				"  __________________[]__________|____________________");
 		
 		try {
-			Thread.sleep(500);
+			Thread.sleep(750);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
