@@ -17,11 +17,11 @@ Room Name: Attic
 Room Description:You are in the attic, the trapdoor below you leads back to parent's bedroom.
 Exit Rooms: D-Parent's Room
 Room Name: F1Hallway
-Room Description: You are in the first floor hallway, the door in front of you leads to the garage,<br> the door to your right leads to the living room, <br>the room behind you leads to the kitchen.
-Exit Rooms: U-F2Hallway, E-F2Hallway
+Room Description: You are in the first floor hallway, the door in front of you leads to the garage,<br> the door to your right leads to the living room, <br>the entrance behind you leads to the kitchen.
+Exit Rooms: U-F2Hallway, D-F0Hallway, E-Living Room, S-Kitchen, N-Garage
 Room Name: Garage
-Room Description: You are in the garage, the garage door is to your right but it seems to be locked.
-Exit Rooms: S-F2Hallway
+Room Description: You are in the garage, the garage door is to your right but it seems to be locked. <br>The door behind you leads to the hallway.
+Exit Rooms: S-F2Hallway, E-Street
 Room Name: Living Room
 Room Description: You are in the living room, the door behind you leads to the front door.
 Exit Rooms: W-F2Hallway
@@ -57,10 +57,7 @@ Room Description: You are on your neighbors front porch, the bell is on the righ
 Exit Rooms: W-Backyard
 Room Name: Shed
 Room Description: You are in the shed, there is a rusty shovel to your left, there is a dog house behind you.
-Exit Rooms: N-Backyard
+Exit Rooms: E-Backyard
 Room Name: Dog house
 Room Description: You are in the dog house, you can only fit legs in first, <br>there is a little peep hole in the door
 Exit Rooms: N-Shed
-Room Name: Forest
-Room Description: You are in the forest, the trees are covering all of the moon light making it almost impossible to see.
-Exit Rooms: W-Street
