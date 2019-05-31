@@ -46,4 +46,18 @@ Exit Rooms: W-F0Hallway
 Room Name: Laundry Room
 Room Description: You are in the laundry room, there is a laundry hamper on the left wall, <br>there are two washing machines on the right of the room.
 Exit Rooms: N-F0Hallway
-
+Room Name: Street
+Room Description: You are in the street, the path ahead is dimly lit by the street lights, <br>to the right is a dark forest, behind you is your backyard.
+Exit Rooms: W-Garage
+Room Name: Backyard
+Room Description: You are in the backyard, jumping the fence to your right will lead to your neighbors house, <br>behind you is you family shed, the door seems to be slightly open.
+Exit Rooms: N-Street
+Room Name: Neighbors house
+Room Description: You are on your neighbors front porch, the bell is on the right of the door.
+Exit Rooms: W-Backyard
+Room Name: Shed
+Room Description: You are in the shed, there is a rusty shovel to your left, there is a dog house behind you.
+Exit Rooms: N-Backyard
+Room Name: Dog house
+Room Description: You are in the dog house, you can only fit legs in first, <br>there is a little peep hole in the door
+Exit Rooms: N-Shed
