@@ -209,7 +209,7 @@ class Game {
 		System.out.println("\n" + currentRoom.longDescription());
 	}
 	
-	private void take(Room currentRoom, ) {
+	private void take(Room currentRoom) {
 		System.out.println("\n You took the " + currentRoom.getRoomInventory());
 	}
 
