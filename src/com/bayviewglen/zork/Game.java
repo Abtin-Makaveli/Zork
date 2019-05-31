@@ -178,9 +178,10 @@ class Game {
 			System.out.println("Where to?");
 			return;
 		}
-		if (!command.hasThirdWord()) {
+		if (command.hasThirdWord()) {
 			// there is no need to say a third word
 			System.out.println("You can only go to one place!");
+			return;
 		}
 		String direction = command.getSecondWord();
 // Try to leave current room.
