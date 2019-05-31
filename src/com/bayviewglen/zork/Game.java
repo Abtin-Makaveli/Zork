@@ -194,7 +194,147 @@ class Game {
 	}
 	
 	private void doorAnimation() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+
+		System.out.println(" ______________");
+		System.out.println("|\\ ___________ /|");
+		System.out.println("| |  _ _ _ _  | |");
+		System.out.println("| | | | | | | | |");
+		System.out.println("| | |-+-+-+-| | |");
+		System.out.println("| | |-+-+=+%| | |");
+		System.out.println("| | |_|_|_|_| | |");
+		System.out.println("| |    ___    | |");
+		System.out.println("| |   [___] ()| |");
+		System.out.println("| |         ||| |");
+		System.out.println("| |         ()| |");
+		System.out.println("| |           | |");
+		System.out.println("| |           | |");
+		System.out.println("| |           | |");
+		System.out.println("|_|___________|_|");
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+
+		System.out.println(" ______________");
+		System.out.println("|\\ ___________ /|");
+		System.out.println("| |  /|,| |   | |");
+		System.out.println("| | |,x,| |   | |");
+		System.out.println("| | |,x,' |   | |");
+		System.out.println("| | |,x   ,   | |");
+		System.out.println("| | |/    |   | |");
+		System.out.println("| |    /] ,   | |");
+		System.out.println("| |   [/ ()   | |");
+		System.out.println("| |       |   | |");
+		System.out.println("| |       |   | |");
+		System.out.println("| |       |   | |");
+		System.out.println("| |      ,'   | |");
+		System.out.println("| |   ,'      | |");
+		System.out.println("|_|,'_________|_|");
 		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
 	}
 
 }
