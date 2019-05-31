@@ -12,7 +12,7 @@ Room Description: You are in your parent's bedroom and the door to your left lea
 Exit Rooms: S-F2Hallway, W-Parent's Bathroom, U-Attic
 Room Name: Parent's Bathroom
 Room Description: You are in your parent's Bathroom and the sink seems to be broken.
-Exit Rooms: E-Parent's Bedroom
+Exit Rooms: E-Parent's Room
 Room Name: Attic
 Room Description :You are in the attic, the trap door below you leads back to parent's bedroom.
 Exit Rooms: D-Parent's Room
