@@ -150,7 +150,7 @@ class Room {
 	}
 
 	public boolean isStairs(Room currentRoom, Room nextRoom) {
-		if (currentRoom.getRoomName().contains("hallway") && nextRoom.getRoomName().contains("hallway")) {
+		if (currentRoom.getRoomName().contains("F") && nextRoom.getRoomName().contains("F")) {
 			return true;
 		}
 		return false;

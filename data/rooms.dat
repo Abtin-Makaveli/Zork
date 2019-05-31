@@ -16,3 +16,6 @@ Exit Rooms: E-Parent's Bedroom
 Room Name: Attic
 Room Description:You are in the attic, the trapdoor below you leads back to parent's bedroom.
 Exit Rooms: D-Parent's Room
+Room Name: F1Hallway
+Room Description:Testing...
+Exit Rooms: U-F2Hallway, E-F2Hallway
