@@ -185,6 +185,7 @@ class Game {
 			System.out.println("There's nothing that way!");
 		else {
 			currentRoom = nextRoom;
+			doorAnimation();
 			System.out.println(currentRoom.longDescription());
 		}
 	}
