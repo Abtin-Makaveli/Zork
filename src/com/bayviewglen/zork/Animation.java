@@ -182,6 +182,42 @@ public class Animation {
 	}
 
 	public static void atticAnimation() {
+		try {
+			Thread.sleep(750);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println(refresh);
+
+		System.out.println("     __________\r\n" + 
+				"    /`.`^%===_/\r\n" + 
+				"    `. `\\ \r\n" + 
+				"      `. `. \r\n" + 
+				"        `./");
+
+		try {
+			Thread.sleep(750);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println(refresh);
+
+		System.out.println("     __________\r\n" + 
+				"    /|________/\r\n" + 
+				"   | |\r\n" + 
+				"   | |\r\n" + 
+				"   | |\r\n" + 
+				"   | |\r\n" + 
+				"   |/  ");
 		
+		try {
+			Thread.sleep(750);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println(lastRefresh);
 	}
 }
