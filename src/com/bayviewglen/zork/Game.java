@@ -192,5 +192,9 @@ class Game {
 	private void look() {
 		System.out.println(currentRoom.longDescription());
 	}
+	
+	private void doorAnimation() {
+		
+	}
 
 }
