@@ -108,9 +108,11 @@ class Room {
 	 * Exits: north west
 	 */
 	public String longDescription() {
-
-		return description + "\n\nIn the room you see the following:\n"
-		 + roomInventory.toString();
+		if (roomInventory.numberOfItems() <= 0) {
+			return description;
+		}else {
+			return description + "\n\nIn the room you see the following:\n" + roomInventory.toString();
+		}
 	}
 
 	/**
