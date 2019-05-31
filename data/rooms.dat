@@ -61,3 +61,6 @@ Exit Rooms: N-Backyard
 Room Name: Dog house
 Room Description: You are in the dog house, you can only fit legs in first, <br>there is a little peep hole in the door
 Exit Rooms: N-Shed
+Room Name: Forest
+Room Description: You are in the forest, the trees are covering all of the moon light making it almost impossible to see.
+Exit Rooms: W-Street
