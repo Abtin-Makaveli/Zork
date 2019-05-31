@@ -5,7 +5,7 @@ public class Animation {
 	private static String lastRefresh = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 	public static void doorAnimation() {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -29,7 +29,7 @@ public class Animation {
 		System.out.println("|_|___________|_|");
 
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -53,7 +53,7 @@ public class Animation {
 		System.out.println("|_|,'_________|_|");
 		
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -63,7 +63,7 @@ public class Animation {
 	
 	public static void stairAnimation() {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -101,47 +101,84 @@ public class Animation {
 				"                    []____|_! ! !\r\n" + 
 				"                    []______|_! !\r\n" + 
 				"                    []________|_!\r\n" + 
-				"  ___ejm____________[]__________|____________________");
+				"  __________________[]__________|____________________");
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
 		System.out.println(refresh);
 		
-		System.out.println("____________________|__________][____________mje___  \r\n" + 
-				"!_|________][                    \r\n" + 
-				"! !_|______][                    \r\n" + 
-				"! ! !_|____][                    \r\n" + 
-				"! ! ! !_|____|                   \r\n" + 
-				"`  ! ! ! !_|____|                 \r\n" + 
-				".` ! ! ! !]|__!_|               \r\n" + 
-				".` ! ! !]|__!_!|              \r\n" + 
-				".` ! !][__!_!_!             \r\n" + 
-				".! !][__!_!_!             \r\n" + 
-				".!][__!_!|!             \r\n" + 
-				"][._!|!!!             \r\n" + 
-				"][_|_.!!!             \r\n" + 
-				"|_][|! ! !!             \r\n" + 
-				"|!_][ ! ! !              \r\n" + 
-				"!__!_][ ! !,               \r\n" + 
-				"|!__!_][ !,                 \r\n" + 
-				"!_!__!_][,                   \r\n" + 
-				"|!_!__!_][                    \r\n" + 
-				"!_!_!_,__][                    \r\n" + 
-				"_____!_____!_____!__!_!'_____][___!_____!_____!    \r\n" + 
-				"!     !     !  ! !      ][   !     !     !    \r\n" + 
-				"!     !     !  !,       ][   !     !     !    \r\n" + 
-				"!     !     !  '        ][   !     !     !    \r\n" + 
-				"_______________(        ][ )_______________   \r\n" + 
-				"_________________         ][  _______________   \r\n" + 
-				"][                    \r\n" + 
-				"][                    \r\n" + 
-				"][                    \r\n" + 
-				"][                    \r\n" + 
-				"][                    \r\n" + 
-				"][                    ");
+		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,\r\n" + 
+				" 8                           8\"b,    \"Ya\r\n" + 
+				" 8                           8  \"b,    \"Ya\r\n" + 
+				" 8                    aaaaaaa8,   \"b,    \"Ya\r\n" + 
+				" 8                    8\"b,    \"Ya   \"8\"\"\"\"\"\"8\r\n" + 
+				" 8                    8  \"b,    \"Ya  8      8\r\n" + 
+				" 8             aaaaaaa8,   \"b,    \"Ya8      8\r\n" + 
+				" 8   A         8\"b,    \"Ya   \"8\"\"\"\"\"\"\"      8\r\n" + 
+				" 8             8  \"b,    \"Ya  8             8\r\n" + 
+				" 8      aaaaaa88,   \"b,    \"Ya8         B   8\r\n" + 
+				" 8      8\"b,    \"Ya   \"8\"\"\"\"\"\"\"             8\r\n" + 
+				" 8      8  \"b,    \"Ya  8                    8\r\n" + 
+				" 8aaaaaa8,   \"b,    \"Ya8                    8\r\n" + 
+				" 8\"b,    \"Ya   \"8\"\"\"\"\"\"\"                    8\r\n" + 
+				" 8  \"b,    \"Ya  8                           8\r\n" + 
+				" 8,   \"b,    \"Ya8                           8\r\n" + 
+				"  \"Ya   \"8\"\"\"\"\"\"\"                           8\r\n" + 
+				"    \"Ya  8                                  8\r\n" + 
+				"      \"Ya8                                  8\r\n" + 
+				"        \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"");
+		
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println(refresh);
+		
+		System.out.println("[]\r\n" + 
+				"                    []\r\n" + 
+				"                    []\r\n" + 
+				"                    []\r\n" + 
+				"                    []\r\n" + 
+				"                    []\r\n" + 
+				"   _______________  []         _________________\r\n" + 
+				"   _______________) []        (_______________\r\n" + 
+				"    !     !     !   []        '  !     !     !\r\n" + 
+				"    !     !     !   []       ,!  !     !     !\r\n" + 
+				"    !     !     !   []      ! !  !     !     !\r\n" + 
+				"    !_____!_____!___[]_____'!_!__!_____!_____!_____\r\n" + 
+				"                    []__,_!_!_!\r\n" + 
+				"                    []_!__!_!|\r\n" + 
+				"                   ,[]_!__!_!\r\n" + 
+				"                 ,! []_!__!|\r\n" + 
+				"               ,! ! []_!__!\r\n" + 
+				"              ! ! ! []_!|\r\n" + 
+				"             !! ! !|[]_|\r\n" + 
+				"             !!!._|_[]\r\n" + 
+				"             !!!|!_.[]\r\n" + 
+				"             !|!_!__[]!.\r\n" + 
+				"             !_!_!__[]! !.\r\n" + 
+				"             !_!_!__[]! ! `.\r\n" + 
+				"              |!_!__|]! ! ! `.\r\n" + 
+				"               |_!__|]! ! ! ! `.\r\n" + 
+				"                 |____|_! ! ! !  `\r\n" + 
+				"                   |____|_! ! ! !\r\n" + 
+				"                    []____|_! ! !\r\n" + 
+				"                    []______|_! !\r\n" + 
+				"                    []________|_!\r\n" + 
+				"  __________________[]__________|____________________");
+		
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println(lastRefresh);
 	}
 
 	public static void atticAnimation() {
