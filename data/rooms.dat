@@ -17,5 +17,20 @@ Room Name: Attic
 Room Description:You are in the attic, the trapdoor below you leads back to parent's bedroom.
 Exit Rooms: D-Parent's Room
 Room Name: F1Hallway
-Room Description:Testing...
+Room Description: You are in the first floor hallway, the door in front of you leads to the garage,<br> the door to your right leads to the living room, <br>the room behind you leads to the kitchen.
 Exit Rooms: U-F2Hallway, E-F2Hallway
+Room Name: Garage
+Room Description: You are in the garage, the garage door is to your right but it seems to be locked.
+Exit Rooms: S-F2Hallway
+Room Name: Living Room
+Room Description: You are in the living room, the door behind you leads to the front door.
+Exit Rooms: W-F2Hallway
+Room Name: Front Door
+Room Description: You are at the front door, you notice that the key is not at the door.
+Exit Rooms: N-Living Room
+Room Name: 	Kitchen
+Room Description: You are in the kitchen, you notice that the oven is cooking something to the left, <br>there is a kitchen cabinet on the right.
+Exit Rooms: N-F2Hallway
+Room Name: F0Hallway
+Room Description: You are in the basement hallway, there are four seperate rooms you can enter, <br>in front of you is the basement office, <br>the room to your left is the electric room there might be batteries there, <br>the wine cellar is to the right, <br>the door behind you leads to the laundry room.
+Exit Rooms: U-F1Hallway
