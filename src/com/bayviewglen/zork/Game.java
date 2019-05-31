@@ -146,7 +146,7 @@ class Game {
 			goRoom(command);
 		else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
-				System.out.println("Quit what?");
+				System.out.println("That would be too easy...");
 			else
 				return true; // signal that we want to quit
 		} else if (commandWord.equals("eat")) {
@@ -177,6 +177,10 @@ class Game {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Where to?");
 			return;
+		}
+		if (!command.hasThirdWord()) {
+			// there is no need to say a third word
+			System.out.println("You can only go to one place!");
 		}
 		String direction = command.getSecondWord();
 // Try to leave current room.
