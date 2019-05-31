@@ -161,7 +161,7 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println("You are lost. You are alone. You wander");
+		System.out.println("You are waken up by a strange sound. You are alone. You wander");
 		System.out.println("around at Monash Uni, Peninsula Campus.");
 		System.out.println();
 		System.out.println("Your command words are:");
