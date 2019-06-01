@@ -122,7 +122,7 @@ class Room {
 		if (roomInventory.numberOfItems() <= 0) {
 			return description;
 		}else {
-			return description + "\n\nIn the room you see the following:\n" + roomInventory.toString();
+			return description + "\n\nIn the room you see the following:\n" + roomInventory.toStringLong();
 		}
 	}
 
