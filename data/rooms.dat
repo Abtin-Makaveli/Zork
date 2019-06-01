@@ -37,8 +37,6 @@ Exit Rooms:N-F1Hallway
 Room Name: F0Hallway
 Room Description: You are in the basement hallway, there are four seperate rooms you can enter, <br>in front of you is the basement office, <br>the room to your left is the electric room there might be batteries there, <br>the wine cellar is to the right, <br>the door behind you leads to the laundry room.
 Exit Rooms:U-F1Hallway, N-Basement Office, W-ELectric Room, E-Wine Cellar, S-Laundry Room.
-Room Description: You are in the basement hallway, there are four separate rooms you can enter. <br>In front of you is the basement office. <br>The room to your left is the electric room there might be batteries there. <br>The wine cellar is to the right. <br>The door behind you leads to the laundry room.
-Exit Rooms:U-F1Hallway, N-Basement Office, W-ELectric Room, E-Wine Cellar, S-Laundry Room
 Room Name: Basement Office
 Room Description: You are in the basement office and there's a desk in front of you with two drawers.
 Exit Rooms:S-F0Hallway
