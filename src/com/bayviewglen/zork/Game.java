@@ -111,8 +111,9 @@ class Game {
 		itemList.add(bleach);
 		masterRoomMap.get("LAUNDRY_ROOM").addToInventory(bleach);
 		itemList.add(bleach);
+		masterRoomMap.get("DOG_HOUSE").addToInventory(bleach);
+		itemList.add(bike);
 		masterRoomMap.get("SHED").addToInventory(bike);
-		
 		
 	}
 
@@ -196,8 +197,8 @@ class Game {
 	 * and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println("You are waken up by a strange sound. You are alone. You wander");
-		System.out.println("around at Monash Uni, Peninsula Campus.");
+		System.out.println("You are waken up by a strange sound. You are alone. You wander...");
+		System.out.println("You don't feel alone...");
 		System.out.println();
 		System.out.println("Your command words are:");
 		parser.showCommands();
