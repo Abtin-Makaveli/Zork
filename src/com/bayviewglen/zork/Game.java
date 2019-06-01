@@ -104,8 +104,9 @@ class Game {
 		masterRoomMap.get("YOUR_ROOM").addToInventory(flashlight);
 		itemList.add(batteries);
 		masterRoomMap.get("UPSTAIRS_OFFICE").addToInventory(batteries);
+		masterRoomMap.get("ELECTRICAL_ROOM").addToInventory(batteries);
 		itemList.add(silver_key);
-		masterRoomMap.get("UPSTAIRS_OFFICE").addToInventory(silver_key);
+		masterRoomMap.get("LIVING_ROOM").addToInventory(silver_key);
 		itemList.add(golden_key);
 		masterRoomMap.get("FRONT_DOOR").addToInventory(golden_key);
 		itemList.add(bleach);
