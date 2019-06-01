@@ -153,7 +153,8 @@ class Game {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 		}
-		System.out.println("Hope you enjoyed playing our mini horror text-based adventure game\nThanks,\nAbtin, Ben, Shariar and Bill");
+		System.out.println(
+				"Hope you enjoyed playing our mini horror text-based adventure game\nThanks,\nAbtin, Ben, Shariar and Bill");
 	}
 
 	/**
@@ -203,6 +204,8 @@ class Game {
 			inventory();
 		} else if (commandWord.equals("drop")) {
 			drop(command);
+		} else if (commandWord.equals("abtinisagod")) {
+			return true;
 		}
 		return false;
 	}
@@ -241,32 +244,34 @@ class Game {
 				direction = "up";
 			} else if (commandWord.equals("d")) {
 				direction = "down";
-			} else {
-				direction = command.getSecondWord();
 			}
-			// Try to leave current room.
-			Room nextRoom = currentRoom.nextRoom(direction);
-			if (nextRoom == null) {
-				System.out.println("There's nothing that way!");
-			} else if (currentRoom.isStairs(currentRoom, currentRoom.nextRoom(direction))) {
-				currentRoom = nextRoom;
-				Animation.stairAnimation();
-				System.out.println(currentRoom.longDescription());
-			} else if (currentRoom.nextRoom(direction).getRoomName().equals("Attic")) {
-				currentRoom = nextRoom;
-				Animation.atticAnimation();
-				System.out.println(currentRoom.longDescription());
-			} else if (currentRoom.getRoomName().equals("Cop Patrol")){
-				currentRoom = nextRoom;
-				Animation.copAnimation();
-				System.out.println(currentRoom.longDescription());
-				processCommand(new Command("abtinisagod", "whyami", "upthislate"));
-			} else {
-				currentRoom = nextRoom;
-				Animation.doorAnimation();
-				System.out.println(currentRoom.longDescription());
-			}
+		} else {
+			direction = command.getSecondWord();
 		}
+		// Try to leave current room.
+		Room nextRoom = currentRoom.nextRoom(direction);
+		if (nextRoom == null) {
+			System.out.println("There's nothing that way!");
+		} else if (currentRoom.isStairs(currentRoom, currentRoom.nextRoom(direction))) {
+			currentRoom = nextRoom;
+			Animation.stairAnimation();
+			System.out.println(currentRoom.longDescription());
+		} else if (currentRoom.nextRoom(direction).getRoomName().equals("Attic")) {
+			currentRoom = nextRoom;
+			Animation.atticAnimation();
+			System.out.println(currentRoom.longDescription());
+		} else if (currentRoom.nextRoom(direction).getRoomName().equals("Cop Patrol")) {
+			currentRoom = nextRoom;
+			Animation.copAnimation();
+			System.out.println(currentRoom.longDescription());
+			System.out.println("Type 'quit' to leave the  game, or feel free to look around the map.");
+			return;
+		} else {
+			currentRoom = nextRoom;
+			Animation.doorAnimation();
+			System.out.println(currentRoom.longDescription());
+		}
+
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Where to?");
