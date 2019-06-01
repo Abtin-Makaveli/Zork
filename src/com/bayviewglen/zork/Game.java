@@ -183,13 +183,15 @@ class Game {
 			else
 				return true; // signal that we want to quit
 		} else if (commandWord.equals("eat")) {
-			System.out.println("Do you really think you should be eating at a time like this?");
+			System.out.println("You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
 		} else if (commandWord.equals("look")) {
 			look();
 		} else if (commandWord.equals("turn")) {
 			flashLight(command);
 		} else if (commandWord.equals("take")) {
 			take(command);
+		} else if (commandWord.equals("inventory") || commandWord.equals("i")) {
+			inventory();
 		}
 		return false;
 	}
@@ -289,6 +291,10 @@ class Game {
 		}
 		System.out.println("You can only take one item at a time!");
 		return;
+	}
+	
+	private void inventory() {
+		System.out.println(playerInventory.toString());
 	}
 
 	private boolean isItem(String secondWord) {
