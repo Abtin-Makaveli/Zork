@@ -5,13 +5,10 @@ Room Name: Your Bathroom
 Room Description: You are in a bathroom, the door in front of you leads back to your room.
 Exit Rooms: N-Your Room
 Room Name: F2Hallway
-<<<<<<< HEAD
 Room Description:You are in the upstairs hallway, there's a closed door in front of you.<br>behind you, you can see the door to the office is open.<br>The door to your left leads back to your room.<br>There's a stairway leading downstairs to your right.
 Exit Rooms: W-Your Room, S-Parent's Room, N-Parent's Room, E-F1Hallway, D-F1Hallway
-=======
 Room Description: You are in the upstairs hallway, there's a closed door in front of you.<br>Behind you, you can see the door to an office is open.<br>The door to your left leads back to your room.<br>There's a stairway leading downstairs to your right.
 Exit Rooms: W-Your Room, S-Parent's Room, N-Upstairs Office, E-F1Hallway, D-F1Hallway
->>>>>>> refs/remotes/origin/master
 Room Name: Parent's Room
 Room Description: You are in your parent's bedroom and the door to your left leads to your parent's bathroom.<br>There's an old cabinet to your left.<br>You notice a trapdoor leading up.
 Exit Rooms: S-F2Hallway, W-Parent's Bathroom, U-Attic
@@ -40,13 +37,10 @@ Room Name: Kitchen
 Room Description: You are in the kitchen, you notice that the oven is cooking something to the left. <br>There is also a kitchen cabinet on the right.
 Exit Rooms: N-F1Hallway
 Room Name: F0Hallway
-<<<<<<< HEAD
 Room Description: You are in the basement hallway, there are four seperate rooms you can enter, <br>in front of you is the basement office, <br>the room to your left is the electric room there might be batteries there, <br>the wine cellar is to the right, <br>the door behind you leads to the laundry room.
 Exit Rooms: U-F1Hallway, N-Basement Office, W-ELectric Room, E-Wine Cellar, S-Laundry Room.
-=======
 Room Description: You are in the basement hallway, there are four separate rooms you can enter. <br>In front of you is the basement office. <br>The room to your left is the electric room there might be batteries there. <br>The wine cellar is to the right. <br>The door behind you leads to the laundry room.
 Exit Rooms: U-F1Hallway
->>>>>>> refs/remotes/origin/master
 Room Name: Basement Office
 Room Description: You are in the basement office and there's a desk in front of you with two drawers.
 Exit Rooms: S-F0Hallway
