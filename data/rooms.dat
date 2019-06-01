@@ -70,3 +70,6 @@ Exit Rooms:E-Backyard
 Room Name: Dog House
 Room Description: You are in the dog house, you can only fit legs in first. <br>you managed to find a little peep hole in the door
 Exit Rooms:S-Backyard
+Room Name: Cop Patrol
+Room Description: As you get closer, you realize the lights are from a cop patrol. <br><br>The cops say you should thank your lucky stars that they found you before the monster found you. <br>You overhear them talking about how the monster has already killed your neighbors.<br><br> T H E  E N D
+Exit Rooms:S-NorthStreet

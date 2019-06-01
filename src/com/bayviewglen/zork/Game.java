@@ -256,6 +256,11 @@ class Game {
 				currentRoom = nextRoom;
 				Animation.atticAnimation();
 				System.out.println(currentRoom.longDescription());
+			} else if (currentRoom.getRoomName().equals("Cop Patrol")){
+				currentRoom = nextRoom;
+				Animation.copAnimation();
+				System.out.println(currentRoom.longDescription());
+				processCommand(new Command("abtinisagod", "whyami", "upthislate"));
 			} else {
 				currentRoom = nextRoom;
 				Animation.doorAnimation();
