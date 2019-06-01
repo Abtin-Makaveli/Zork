@@ -50,7 +50,7 @@ public class Inventory {
 	public String toString() {
 		String temp = "";
 		for (String key : items.keySet()) {
-			temp += items.get(key).getName() + "\n";
+			temp += items.get(key).getDescription() + "\n";
 		}
 		
 		return temp;
