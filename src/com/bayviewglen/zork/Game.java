@@ -123,7 +123,7 @@ class Game {
 		try {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("YOUR_ROOM");
-			playerInventory = new Inventory(50);
+			playerInventory = new Inventory(30);
 			initItems();
 		} catch (Exception e) {
 			e.printStackTrace();
