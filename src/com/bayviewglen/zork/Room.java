@@ -12,7 +12,7 @@ package com.bayviewglen.zork;
  * "Room" represents one location in the scenery of the game.  It is 
  * connected to at most four other rooms via exits.  The exits are labelled
  * north, east, south, west.  For each direction, the room stores a reference
- * to the neighbouring room, or null if there is no exit in that direction.
+ * to the Neighboring room, or null if there is no exit in that direction.
  */
 import java.util.Set;
 import java.util.HashMap;

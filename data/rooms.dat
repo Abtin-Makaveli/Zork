@@ -14,7 +14,7 @@ Room Name: Parent's Bathroom
 Room Description: You are in your parent's Bathroom and the sink seems to be broken.
 Exit Rooms:E-Parent's Room
 Room Name: Attic
-Room Description :You are in the attic, the trap door below you leads back to parent's bedroom.
+Room Description: You are in the attic, the trap door below you leads back to parent's bedroom.
 Exit Rooms:D-Parent's Room
 Room Name: Upstairs Office
 Room Description: You are in the upstairs office.<br>It seems like no one has been in this room in months.<br>The door behind you takes you back to the upstairs hallway.
@@ -35,8 +35,8 @@ Room Name: Kitchen
 Room Description: You are in the kitchen, you notice that the oven is cooking something to the left. <br>There is also a kitchen cabinet on the right.
 Exit Rooms:N-F1Hallway
 Room Name: F0Hallway
-Room Description: You are in the basement hallway, there are four seperate rooms you can enter, <br>in front of you is the basement office, <br>the room to your left is the electric room there might be batteries there, <br>the wine cellar is to the right, <br>the door behind you leads to the laundry room.
-Exit Rooms:U-F1Hallway, N-Basement Office, W-ELectric Room, E-Wine Cellar, S-Laundry Room.
+Room Description: You are in the basement hallway, there are four separate rooms you can enter, <br>in front of you is the basement office, <br>the room to your left is the electric room there might be batteries there, <br>the wine cellar is to the right, <br>the door behind you leads to the laundry room.
+Exit Rooms:U-F1Hallway, N-Basement Office, W-ELectric Room, E-Wine Cellar, S-Laundry Room
 Room Name: Basement Office
 Room Description: You are in the basement office and there's a desk in front of you with two drawers.
 Exit Rooms:S-F0Hallway
@@ -50,17 +50,23 @@ Room Name: Laundry Room
 Room Description: You are in the laundry room and there is a laundry hamper on the left wall. <br>You can see two washing machines on the right of the room.
 Exit Rooms:N-F0Hallway
 Room Name: Street
-Room Description: You are in the street, the path ahead is dimly lit by the street light. <br>To the right is a dark forest and behind you is your backyard.
-Exit Rooms:W-Garage
+Room Description: You are in the street, the path ahead is dimly lit by the street light. <br>To your left the garage door is open. The street behind you lead's to your Neighbor's house.
+Exit Rooms:W-Garage, N-NorthStreet, S-SouthStreet
+Room Name: NorthStreet
+Room Description: You are getting farther away from your house, to your left there is a gate that leads to your backyard. <br>In the distance you see some flashing lights...
+Exit Rooms:S-Street, N-Cop Patrol, W-Backyard
+Room Name: SouthStreet
+Room Description: This part of the street is almost pitch black, you can only see your neighbor's house to your right.
+Exit Rooms:N-Street, E-Neighbor's House
 Room Name: Backyard
-Room Description: You are in the backyard, jumping the fence to your right will lead to your neighbor's house. <br>Behind you is you family shed and the door seems to be slightly open.
-Exit Rooms:N-Street
-Room Name: Neighbors house
+Room Description: You are in the backyard, <br>to your left is a shed and the door seems to be slightly open. <br>Your dog house is in front of you, its empty... <br>The gate to your right leads you back into the street.
+Exit Rooms:E-Street, N-Dog House, W-Shed
+Room Name: Neighbors House
 Room Description: You are on your neighbors front porch you can see the bell on the right of the door.
-Exit Rooms:W-Backyard
+Exit Rooms:W-SouthStreet
 Room Name: Shed
 Room Description: You are in the shed, there is a rusty shovel to your left and there is a dog house behind you.
 Exit Rooms:E-Backyard
 Room Name: Dog House
 Room Description: You are in the dog house, you can only fit legs in first. <br>you managed to find a little peep hole in the door
-Exit Rooms:N-Shed
+Exit Rooms:S-Backyard
