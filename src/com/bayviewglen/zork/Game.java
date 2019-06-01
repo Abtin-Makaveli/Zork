@@ -97,8 +97,8 @@ class Game {
 		Item batteries = new Item("batteries", 1);
 		Item silver_key = new Item("silver key", 2);
 		Item golden_key = new Item("golden key", 2);
-		Item bleach = new Item("bottle of bleach", 2);
-		Item bike = new Item("bicycle", 2);
+		Item bleach = new Item("bottle of bleach", 9);
+		Item bike = new Item("bicycle", 20);
 
 		itemList.add(flashlight);
 		masterRoomMap.get("YOUR_ROOM").addToInventory(flashlight);
