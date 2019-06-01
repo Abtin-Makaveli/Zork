@@ -99,7 +99,7 @@ class Game {
 		Item golden_key = new Item("golden key", 2);
 		Item bleach = new Item("bottle of bleach", 2);
 		Item bike = new Item("bicycle", 2);
-		
+
 		itemList.add(flashlight);
 		masterRoomMap.get("YOUR_ROOM").addToInventory(flashlight);
 		itemList.add(batteries);
@@ -114,7 +114,7 @@ class Game {
 		masterRoomMap.get("DOG_HOUSE").addToInventory(bleach);
 		itemList.add(bike);
 		masterRoomMap.get("SHED").addToInventory(bike);
-		
+
 	}
 
 	/**
@@ -170,11 +170,14 @@ class Game {
 			return false;
 		}
 		String commandWord = command.getCommandWord();
-		if (commandWord.equals("help"))
+		if (commandWord.equals("help")) {
 			printHelp();
-		else if (commandWord.equals("go"))
+		} else if (commandWord.equals("go")) {
 			goRoom(command);
-		else if (commandWord.equals("quit")) {
+		} else if (commandWord.equals("n") || commandWord.equals("s") || commandWord.equals("e")
+				|| commandWord.equals("w") || commandWord.equals("u") || commandWord.equals("d")) {
+			goRoom(command);
+		} else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit is a one word command!");
 			else
@@ -209,6 +212,43 @@ class Game {
 	 * otherwise print an error message.
 	 */
 	private void goRoom(Command command) {
+		String commandWord = command.getCommandWord();
+		String direction = null;
+		if (commandWord.equals("n") || commandWord.equals("s") || commandWord.equals("e") || commandWord.equals("w")
+				|| commandWord.equals("u") || commandWord.equals("d")) {
+			if(commandWord.equals("n")) {
+				direction = "north";
+			} else if (commandWord.equals("s")) {
+				direction = "south";
+			} else if (commandWord.equals("e")) {
+				direction = "east";
+			} else if (commandWord.equals("w")) {
+				direction = "west";
+			} else if (commandWord.equals("u")) {
+				direction = "up";
+			} else if (commandWord.equals("d")) {
+				direction = "down";
+			} else {
+				direction = command.getSecondWord();
+			}
+			// Try to leave current room.
+			Room nextRoom = currentRoom.nextRoom(direction);
+			if (nextRoom == null) {
+				System.out.println("There's nothing that way!");
+			} else if (currentRoom.isStairs(currentRoom, currentRoom.nextRoom(direction))) {
+				currentRoom = nextRoom;
+				Animation.stairAnimation();
+				System.out.println(currentRoom.longDescription());
+			} else if (currentRoom.nextRoom(direction).getRoomName().equals("Attic")) {
+				currentRoom = nextRoom;
+				Animation.atticAnimation();
+				System.out.println(currentRoom.longDescription());
+			} else {
+				currentRoom = nextRoom;
+				Animation.doorAnimation();
+				System.out.println(currentRoom.longDescription());
+			}
+		}
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Where to?");
@@ -218,24 +258,6 @@ class Game {
 			// there is no need to say a third word
 			System.out.println("You can only go to one place!");
 			return;
-		}
-		String direction = command.getSecondWord();
-// Try to leave current room.
-		Room nextRoom = currentRoom.nextRoom(direction);
-		if (nextRoom == null) {
-			System.out.println("There's nothing that way!");
-		} else if (currentRoom.isStairs(currentRoom, currentRoom.nextRoom(direction))) {
-			currentRoom = nextRoom;
-			Animation.stairAnimation();
-			System.out.println(currentRoom.longDescription());
-		} else if (currentRoom.nextRoom(direction).getRoomName().equals("Attic")) {
-			currentRoom = nextRoom;
-			Animation.atticAnimation();
-			System.out.println(currentRoom.longDescription());
-		} else {
-			currentRoom = nextRoom;
-			Animation.doorAnimation();
-			System.out.println(currentRoom.longDescription());
 		}
 	}
 
@@ -247,7 +269,7 @@ class Game {
 		if (!command.hasThirdWord()) {
 			if (isItem(command.getSecondWord())) {
 				Item object = null;
-				for (int i=0; i < currentRoom.getRoomInventory().numberOfItems(); i++) {
+				for (int i = 0; i < currentRoom.getRoomInventory().numberOfItems(); i++) {
 					if (currentRoom.getRoomInventory().hasItemInInventory(command.getSecondWord())) {
 						object = currentRoom.getRoomInventory().getItem(command.getSecondWord());
 					}
@@ -271,7 +293,7 @@ class Game {
 
 	private boolean isItem(String secondWord) {
 		for (Item target : itemList) {
-			if(secondWord.toLowerCase().equals(target.getName().toLowerCase())) {
+			if (secondWord.toLowerCase().equals(target.getName().toLowerCase())) {
 				return true;
 			}
 		}
