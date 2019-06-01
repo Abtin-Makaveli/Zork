@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import com.bayviewglen.zork.Items.Batteries;
+import com.bayviewglen.zork.Items.Bleach;
 import com.bayviewglen.zork.Items.Flashlight;
 import com.bayviewglen.zork.Items.GameKey;
 import com.bayviewglen.zork.Items.Item;
@@ -102,14 +103,15 @@ class Game {
 		Item batteries = new Batteries("batteries", 2, "A twin pack of batteries");
 		Item silver_key = new GameKey("silver key", 2, "A silver mystery key");
 		Item golden_key = new GameKey("golden key", 2, "A golden mystery key");
-		Item bleach = new Item("bottle of bleach", 9, "A bottle with it's label scratched off, but it smells strongly of bleach");
+		Item bleach = new Bleach("bottle of bleach", 9,
+				"A bottle with it's label scratched off, but it smells strongly of bleach");
 		Item bike = new Item("bicycle", 50, "A broken bike, it doesn't look fixable");
 
 		itemList.add(flashlight);
 		masterRoomMap.get("YOUR_ROOM").addToInventory(flashlight);
 		itemList.add(batteries);
 		masterRoomMap.get("UPSTAIRS_OFFICE").addToInventory(batteries);
-		masterRoomMap.get("ELECTRIC_ROOM").addToInventory(batteries); //second location you can find batteries
+		masterRoomMap.get("ELECTRIC_ROOM").addToInventory(batteries); // second location you can find batteries
 		itemList.add(silver_key);
 		masterRoomMap.get("LIVING_ROOM").addToInventory(silver_key);
 		itemList.add(golden_key);
@@ -189,7 +191,8 @@ class Game {
 			else
 				return true; // signal that we want to quit
 		} else if (commandWord.equals("eat")) {
-			System.out.println("You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
+			System.out
+					.println("You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
 		} else if (commandWord.equals("look")) {
 			look();
 		} else if (commandWord.equals("turn") || commandWord.contentEquals("use")) {
@@ -198,7 +201,7 @@ class Game {
 			take(command);
 		} else if (commandWord.equals("inventory") || commandWord.equals("i")) {
 			inventory();
-		} else if(commandWord.equals("drop")) {
+		} else if (commandWord.equals("drop")) {
 			drop(command);
 		}
 		return false;
@@ -226,7 +229,7 @@ class Game {
 		String direction = null;
 		if (commandWord.equals("n") || commandWord.equals("s") || commandWord.equals("e") || commandWord.equals("w")
 				|| commandWord.equals("u") || commandWord.equals("d")) {
-			if(commandWord.equals("n")) {
+			if (commandWord.equals("n")) {
 				direction = "north";
 			} else if (commandWord.equals("s")) {
 				direction = "south";
@@ -300,11 +303,23 @@ class Game {
 		System.out.println("You can only take one item at a time!");
 		return;
 	}
-	
+
 	private void drop(Command command) {
-		
+		if (!command.hasThirdWord()) {
+			if (playerInventory.hasItemInInventory(command.getSecondWord())) {
+				Item object = playerInventory.getItem(command.getSecondWord());
+				playerInventory.removeFromInventory(object);
+				currentRoom.addToInventory(object);
+				System.out.println("You dropped the " + object.getName());
+				return;
+			}
+			System.out.println("That object doesn't exist!");
+			return;
+		}
+		System.out.println("You can only drop one item at a time!");
+		return;
 	}
-	
+
 	private void inventory() {
 		System.out.println("\nYou have:");
 		System.out.println(playerInventory.toString());
@@ -321,7 +336,7 @@ class Game {
 
 	private void use(Command command) {
 		if (command.hasThirdWord() && command.getCommandWord().equals("turn")) {
-			
+
 		}
 	}
 
