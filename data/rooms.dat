@@ -1,66 +1,76 @@
 Room Name: Your Room
-Room Description:You are in your room, there's a window thats slightly opened to your left,<br>on your right there's an open door leading to a hallway.<br>There is a door behind leading to your washroom.
-Exit Rooms: S-Your Washroom, E-F2Hallway
-Room Name: Your Washroom
-Room Description:You are in a washroom, the door in front of you leads back to your room.
+Room Description: You are in your room, there's a window that's slightly opened to your left.<br>On your right there's an open door leading to a hallway.<br>The door behind you leads to your Bathroom
+Exit Rooms: S-Your Bathroom, E-F2Hallway
+Room Name: Your Bathroom
+Room Description: You are in a bathroom, the door in front of you leads back to your room.
 Exit Rooms: N-Your Room
 Room Name: F2Hallway
+<<<<<<< HEAD
 Room Description:You are in the upstairs hallway, there's a closed door in front of you.<br>behind you, you can see the door to the office is open.<br>The door to your left leads back to your room.<br>There's a stairway leading downstairs to your right.
 Exit Rooms: W-Your Room, S-Parent's Room, N-Parent's Room, E-F1Hallway, D-F1Hallway
+=======
+Room Description: You are in the upstairs hallway, there's a closed door in front of you.<br>Behind you, you can see the door to an office is open.<br>The door to your left leads back to your room.<br>There's a stairway leading downstairs to your right.
+Exit Rooms: W-Your Room, S-Parent's Room, N-Upstairs Office, E-F1Hallway, D-F1Hallway
+>>>>>>> refs/remotes/origin/master
 Room Name: Parent's Room
-Room Description:You are in your parents bedroom, the door to your left leads to your parents washroom,<br>there is an old cabinet to your left.<br>You notice a trapdoor leading up.
-Exit Rooms: S-F2Hallway, W-Parent's Washroom, U-Attic
-Room Name: Parent's Washroom
-Room Description:You are in your parent's washroom. The sink is broken.
-Exit Rooms: E-Parent's Bedroom
+Room Description: You are in your parent's bedroom and the door to your left leads to your parent's bathroom.<br>There's an old cabinet to your left.<br>You notice a trapdoor leading up.
+Exit Rooms: S-F2Hallway, W-Parent's Bathroom, U-Attic
+Room Name: Parent's Bathroom
+Room Description: You are in your parent's Bathroom and the sink seems to be broken.
+Exit Rooms: E-Parent's Room
 Room Name: Attic
-Room Description:You are in the attic, the trapdoor below you leads back to parent's bedroom.
+Room Description :You are in the attic, the trap door below you leads back to parent's bedroom.
 Exit Rooms: D-Parent's Room
-Room Name: F1Hallway
-Room Description: You are in the first floor hallway, the door in front of you leads to the garage,<br> the door to your right leads to the living room, <br>the room behind you leads to the kitchen.
-Exit Rooms: U-F2Hallway, E-F2Hallway
-Room Name: Garage
-Room Description: You are in the garage, the garage door is to your right but it seems to be locked.
+Room Name: Upstairs Office
+Room Description: You are in the upstairs office.<br>It seems like no one has been in this room in months.<br>The door behind you takes you back to the upstairs hallway.
 Exit Rooms: S-F2Hallway
+Room Name: F1Hallway
+Room Description: You are in the first floor hallway, the door in front of you leads to the garage.<br> The door to your right leads to the living room. <br>The entrance behind you leads to the kitchen.
+Exit Rooms: U-F2Hallway, D-F0Hallway, N-Living Room, S-Kitchen, E-Garage
+Room Name: Garage
+Room Description: You are in the garage, the garage door is to your right but it seems to be locked. <br>The door behind you leads to the hallway.
+Exit Rooms: S-F1Hallway, E-Street
 Room Name: Living Room
 Room Description: You are in the living room, the door behind you leads to the front door.
-Exit Rooms: W-F2Hallway
+Exit Rooms: W-F1Hallway
 Room Name: Front Door
 Room Description: You are at the front door, you notice that the key is not at the door.
 Exit Rooms: N-Living Room
-Room Name: 	Kitchen
-Room Description: You are in the kitchen, you notice that the oven is cooking something to the left, <br>there is a kitchen cabinet on the right.
-Exit Rooms: N-F2Hallway
+Room Name: Kitchen
+Room Description: You are in the kitchen, you notice that the oven is cooking something to the left. <br>There is also a kitchen cabinet on the right.
+Exit Rooms: N-F1Hallway
 Room Name: F0Hallway
+<<<<<<< HEAD
 Room Description: You are in the basement hallway, there are four seperate rooms you can enter, <br>in front of you is the basement office, <br>the room to your left is the electric room there might be batteries there, <br>the wine cellar is to the right, <br>the door behind you leads to the laundry room.
 Exit Rooms: U-F1Hallway, N-Basement Office, W-ELectric Room, E-Wine Cellar, S-Laundry Room.
+=======
+Room Description: You are in the basement hallway, there are four separate rooms you can enter. <br>In front of you is the basement office. <br>The room to your left is the electric room there might be batteries there. <br>The wine cellar is to the right. <br>The door behind you leads to the laundry room.
+Exit Rooms: U-F1Hallway
+>>>>>>> refs/remotes/origin/master
 Room Name: Basement Office
-Room Description: you are in the basement office, there is a desk in front of you with two drawers.
+Room Description: You are in the basement office and there's a desk in front of you with two drawers.
 Exit Rooms: S-F0Hallway
 Room Name: Electric Room
-Room Description: You are in the electrical room, you notice a box in the far left of the room.
+Room Description: You are in the electrical room and you notice a box in the far left of the room.
 Exit Rooms: E-F0Hallway
 Room Name: Wine Cellar
-Room Description: You are in the wine cellar, there are two wine racks on the right side of the room.
+Room Description: You are in the wine cellar and there are two wine racks on the right side of the room.
 Exit Rooms: W-F0Hallway
 Room Name: Laundry Room
-Room Description: You are in the laundry room, there is a laundry hamper on the left wall, <br>there are two washing machines on the right of the room.
+Room Description: You are in the laundry room and there is a laundry hamper on the left wall. <br>You can see two washing machines on the right of the room.
 Exit Rooms: N-F0Hallway
 Room Name: Street
-Room Description: You are in the street, the path ahead is dimly lit by the street lights, <br>to the right is a dark forest, behind you is your backyard.
+Room Description: You are in the street, the path ahead is dimly lit by the street light. <br>To the right is a dark forest and behind you is your backyard.
 Exit Rooms: W-Garage
 Room Name: Backyard
-Room Description: You are in the backyard, jumping the fence to your right will lead to your neighbors house, <br>behind you is you family shed, the door seems to be slightly open.
+Room Description: You are in the backyard, jumping the fence to your right will lead to your neighbor's house. <br>Behind you is you family shed and the door seems to be slightly open.
 Exit Rooms: N-Street
 Room Name: Neighbors house
-Room Description: You are on your neighbors front porch, the bell is on the right of the door.
+Room Description: You are on your neighbors front porch you can see the bell on the right of the door.
 Exit Rooms: W-Backyard
 Room Name: Shed
-Room Description: You are in the shed, there is a rusty shovel to your left, there is a dog house behind you.
-Exit Rooms: N-Backyard
-Room Name: Dog house
-Room Description: You are in the dog house, you can only fit legs in first, <br>there is a little peep hole in the door
+Room Description: You are in the shed, there is a rusty shovel to your left and there is a dog house behind you.
+Exit Rooms: E-Backyard
+Room Name: Dog House
+Room Description: You are in the dog house, you can only fit legs in first. <br>you managed to find a little peep hole in the door
 Exit Rooms: N-Shed
-Room Name: Forest
-Room Description: You are in the forest, the trees are covering all of the moon light making it almost impossible to see.
-Exit Rooms: W-Street

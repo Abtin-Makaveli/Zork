@@ -45,6 +45,14 @@ class Room {
 	public Inventory getRoomInventory() {
 		return roomInventory;
 	}
+	
+	public void removeFromInventory(Item item) {
+		roomInventory.removeFromInventory(item);
+	}
+	
+	public void addToInventory(Item item) {
+		roomInventory.addToInventory(item);
+	}
 
 	public void setExit(char direction, Room r) throws Exception {
 		String dir = "";
