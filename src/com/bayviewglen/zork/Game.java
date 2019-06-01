@@ -246,19 +246,26 @@ class Game {
 		if (!command.hasThirdWord()) {
 			if (isItem(command.getSecondWord())) {
 				Item object = null;
-				for (Item find : itemList) {
-					if (find.getName().toLowerCase().equals(command.getSecondWord().toLowerCase())) {
-						object = find;
+				for (int i=0; i < currentRoom.getRoomInventory().numberOfItems(); i++) {
+					if (currentRoom.getRoomInventory().hasItemInInventory(command.getSecondWord())) {
+						object = currentRoom.getRoomInventory().getItem(command.getSecondWord());
 					}
 				}
-				if (playerInventory.addToInventory(object)) {
+				if (playerInventory.addToInventory(object) && object != null) {
 					playerInventory.addToInventory(object);
 					currentRoom.removeFromInventory(object);
+					System.out.println("You took the " + object.getName());
+					return;
 				} else {
 					System.out.println("You don't have enough space in your inventory!\nTry dropping something...");
+					return;
 				}
 			}
+			System.out.println("That object doesn't exist!");
+			return;
 		}
+		System.out.println("You can only take one item at a time!");
+		return;
 	}
 
 	private boolean isItem(String secondWord) {

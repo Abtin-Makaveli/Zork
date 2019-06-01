@@ -54,5 +54,9 @@ public class Inventory {
 		return temp;
 	}
 	
+	public Item getItem(String name) {		
+		return items.get(name);
+	}
+	
 
 }	
