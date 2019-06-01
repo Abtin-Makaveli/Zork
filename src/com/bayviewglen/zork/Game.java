@@ -153,7 +153,7 @@ class Game {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 		}
-		System.out.println("Thank you for playing.  Good bye.");
+		System.out.println("Hope you enjoyed playing our mini horror text-based adventure game\nThanks,\nAbtin, Ben, Shariar and Bill");
 	}
 
 	/**
