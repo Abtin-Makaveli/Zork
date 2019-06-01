@@ -2,6 +2,7 @@ package com.bayviewglen.zork;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -33,7 +34,8 @@ class Game {
 	// In a hashmap keys are case sensitive.
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
-	private HashMap<String, Room> masterRoomMap;
+	private HashMap<String, Room> masterRoomMap; // room map
+	private ArrayList<Item> itemList = new ArrayList<Item>();
 
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
@@ -88,6 +90,19 @@ class Game {
 	}
 
 	/**
+	 * put all the items in itemList
+	 */
+	private void initItems() {
+		Item flashlight = new Item("flashlight", 5);
+		Item test = new Item("test", 1);
+		
+		itemList.add(flashlight);
+		masterRoomMap.get("YOUR_ROOM").addToInventory(flashlight);
+		itemList.add(test);
+		masterRoomMap.get("YOUR_ROOM").addToInventory(test);
+	}
+
+	/**
 	 * Create the game and initialise its internal map.
 	 */
 	public Game() {
@@ -95,7 +110,7 @@ class Game {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("YOUR_ROOM");
 			playerInventory = new Inventory(50);
-			currentRoom.getRoomInventory().addToInventory(new Item("flashlight", 3));
+			initItems();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -146,13 +161,17 @@ class Game {
 			goRoom(command);
 		else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
-				System.out.println("That would be too easy...");
+				System.out.println("Quit is a one word command!");
 			else
 				return true; // signal that we want to quit
 		} else if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("look")) {
 			look();
+		} else if (commandWord.equals("turn")) {
+			flashLight(command);
+		} else if (commandWord.equals("take")) {
+			take(command);
 		}
 		return false;
 	}
@@ -208,9 +227,37 @@ class Game {
 	private void look() {
 		System.out.println("\n" + currentRoom.longDescription());
 	}
-	
-	private void take(Room currentRoom) {
-		System.out.println("\n You took the " + currentRoom.getRoomInventory());
+
+	private void take(Command command) {
+		if (!command.hasThirdWord()) {
+			if (isItem(command.getSecondWord())) {
+				Item object = null;
+				for (Item find : itemList) {
+					if (find.getName().toLowerCase().equals(command.getSecondWord().toLowerCase())) {
+						object = find;
+					}
+				}
+				if (playerInventory.addToInventory(object)) {
+					playerInventory.addToInventory(object);
+					currentRoom.removeFromInventory(object);
+				} else {
+					System.out.println("You don't have enough space in your inventory!\nTry dropping something...");
+				}
+			}
+		}
+	}
+
+	private boolean isItem(String secondWord) {
+		for (Item target : itemList) {
+			if(secondWord.toLowerCase().equals(target.getName().toLowerCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private void flashLight(Command command) {
+
 	}
 
 }
