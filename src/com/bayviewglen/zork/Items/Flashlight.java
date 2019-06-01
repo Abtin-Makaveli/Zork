@@ -2,8 +2,8 @@ package com.bayviewglen.zork.Items;
 
 public class Flashlight extends Item{
 
-	public Flashlight() {
-		super("flashlight", 5, "An empty flashlight");
+	public Flashlight(String name, int weight, String description) {
+		super(name, weight, description);
 	}
 
 }

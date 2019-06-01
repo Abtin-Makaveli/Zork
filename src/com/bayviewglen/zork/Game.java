@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import com.bayviewglen.zork.Items.Batteries;
+import com.bayviewglen.zork.Items.Flashlight;
+import com.bayviewglen.zork.Items.GameKey;
 import com.bayviewglen.zork.Items.Item;
 
 /**
@@ -95,10 +98,10 @@ class Game {
 	 * put all the items in itemList
 	 */
 	private void initItems() {
-		Item flashlight = new Item("flashlight", 5, "An empty flashlight");
-		Item batteries = new Item("batteries", 2, "A twin pack of batteries");
-		Item silver_key = new Item("silver key", 2, "A silver mystery key");
-		Item golden_key = new Item("golden key", 2, "A golden mystery key");
+		Item flashlight = new Flashlight("flashlight", 5, "An empty flashlight");
+		Item batteries = new Batteries("batteries", 2, "A twin pack of batteries");
+		Item silver_key = new GameKey("silver key", 2, "A silver mystery key");
+		Item golden_key = new GameKey("golden key", 2, "A golden mystery key");
 		Item bleach = new Item("bottle of bleach", 9, "A bottle with it's label scratched off, but it smells strongly of bleach");
 		Item bike = new Item("bicycle", 50, "A broken bike, it doesn't look fixable");
 
@@ -106,7 +109,7 @@ class Game {
 		masterRoomMap.get("YOUR_ROOM").addToInventory(flashlight);
 		itemList.add(batteries);
 		masterRoomMap.get("UPSTAIRS_OFFICE").addToInventory(batteries);
-		masterRoomMap.get("ELECTRICAL_ROOM").addToInventory(batteries); //second location you can find batteries
+		masterRoomMap.get("ELECTRIC_ROOM").addToInventory(batteries); //second location you can find batteries
 		itemList.add(silver_key);
 		masterRoomMap.get("LIVING_ROOM").addToInventory(silver_key);
 		itemList.add(golden_key);

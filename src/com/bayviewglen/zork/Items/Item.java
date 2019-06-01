@@ -10,6 +10,7 @@ public class Item {
 		super();
 		this.name = name;
 		this.weight = weight;
+		this.description = description;
 		usable = true;
 	}
 	
