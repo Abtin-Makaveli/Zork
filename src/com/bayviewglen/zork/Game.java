@@ -294,6 +294,7 @@ class Game {
 	}
 	
 	private void inventory() {
+		System.out.println("\nYou have:");
 		System.out.println(playerInventory.toString());
 	}
 
