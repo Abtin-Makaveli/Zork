@@ -93,12 +93,12 @@ class Game {
 	 * put all the items in itemList
 	 */
 	private void initItems() {
-		Item flashlight = new Item("flashlight", 5);
-		Item batteries = new Item("batteries", 1);
-		Item silver_key = new Item("silver key", 2);
-		Item golden_key = new Item("golden key", 2);
-		Item bleach = new Item("bottle of bleach", 9);
-		Item bike = new Item("bicycle", 20);
+		Item flashlight = new Item("flashlight", 5, "An empty flashlight");
+		Item batteries = new Item("batteries", 2, "A twin pack of batteries");
+		Item silver_key = new Item("silver key", 2, "A silver mystery key");
+		Item golden_key = new Item("golden key", 2, "A golden mystery key");
+		Item bleach = new Item("bottle of bleach", 9, "A bottle with it's label scratched off, but it smells strongly of bleach");
+		Item bike = new Item("bicycle", 50, "A broken bike, it doesn't look fixable");
 
 		itemList.add(flashlight);
 		masterRoomMap.get("YOUR_ROOM").addToInventory(flashlight);
@@ -315,7 +315,7 @@ class Game {
 	}
 
 	private void use(Command command) {
-		if (command.hasThirdWord()) {
+		if (command.hasThirdWord() && command.getCommandWord().equals("turn")) {
 			
 		}
 	}

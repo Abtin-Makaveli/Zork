@@ -3,11 +3,14 @@ package com.bayviewglen.zork;
 public class Item {
 	private String name;
 	private int weight;
+	private String description;
+	private boolean usable;
 	
-	public Item(String name, int weight) {
+	public Item(String name, int weight, String description) {
 		super();
 		this.name = name;
 		this.weight = weight;
+		usable = true;
 	}
 	
 	public String getName() {
@@ -22,6 +25,20 @@ public class Item {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
-	
-	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public boolean isUsable() {
+		return usable;
+	}
+	public void changeUsable() {
+		if (usable) {
+			usable = false;
+		} else {
+			usable = true;
+		}
+	}
 }
