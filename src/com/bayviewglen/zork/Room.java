@@ -15,6 +15,9 @@ package com.bayviewglen.zork;
  * to the Neighboring room, or null if there is no exit in that direction.
  */
 import java.util.Set;
+
+import com.bayviewglen.zork.Items.Item;
+
 import java.util.HashMap;
 import java.util.Iterator;
 

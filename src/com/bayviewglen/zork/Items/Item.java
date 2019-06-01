@@ -1,4 +1,4 @@
-package com.bayviewglen.zork;
+package com.bayviewglen.zork.Items;
 
 public class Item {
 	private String name;

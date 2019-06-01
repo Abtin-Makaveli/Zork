@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import com.bayviewglen.zork.Items.Item;
+
 /**
  * Class Game - the main class of the "Zork" game.
  *

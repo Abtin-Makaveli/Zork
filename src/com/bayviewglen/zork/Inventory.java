@@ -2,6 +2,8 @@ package com.bayviewglen.zork;
 
 import java.util.HashMap;
 
+import com.bayviewglen.zork.Items.Item;
+
 public class Inventory {
 
 	private HashMap<String, Item> items;
