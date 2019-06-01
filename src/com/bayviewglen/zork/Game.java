@@ -187,12 +187,14 @@ class Game {
 			System.out.println("You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
 		} else if (commandWord.equals("look")) {
 			look();
-		} else if (commandWord.equals("turn")) {
-			flashLight(command);
+		} else if (commandWord.equals("turn") || commandWord.contentEquals("use")) {
+			use(command);
 		} else if (commandWord.equals("take")) {
 			take(command);
 		} else if (commandWord.equals("inventory") || commandWord.equals("i")) {
 			inventory();
+		} else if(commandWord.equals("drop")) {
+			drop(command);
 		}
 		return false;
 	}
@@ -204,7 +206,7 @@ class Game {
 	 */
 	private void printHelp() {
 		System.out.println("You are waken up by a strange sound. You are alone. You wander...");
-		System.out.println("You don't feel alone...");
+		System.out.println("You can travel to diferent directions using North, South, East, West, Up and Down.");
 		System.out.println();
 		System.out.println("Your command words are:");
 		parser.showCommands();
@@ -294,6 +296,10 @@ class Game {
 		return;
 	}
 	
+	private void drop(Command command) {
+		
+	}
+	
 	private void inventory() {
 		System.out.println("\nYou have:");
 		System.out.println(playerInventory.toString());
@@ -308,8 +314,10 @@ class Game {
 		return false;
 	}
 
-	private void flashLight(Command command) {
-
+	private void use(Command command) {
+		if (command.hasThirdWord()) {
+			
+		}
 	}
 
 }
