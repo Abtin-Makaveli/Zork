@@ -42,12 +42,10 @@ class Game {
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap; // room map
-	private HashMap<String, String> testMap; // room map
 	private ArrayList<Item> itemList = new ArrayList<Item>();
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
-		testMap = new HashMap<String, String>();
 		Scanner roomScanner;
 		try {
 			HashMap<String, HashMap<String, String>> exits = new HashMap<String, HashMap<String, String>>();
