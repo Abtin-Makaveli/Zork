@@ -18,6 +18,7 @@ import java.util.Set;
 
 import com.bayviewglen.zork.Items.Item;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -130,12 +131,20 @@ class Room {
 	 * Return a string describing the room's exits, for example "Exits: north west
 	 * ".
 	 */
-	private String exitString() {
+	public String exitString() {
 		String returnString = "Exits:";
-		Set keys = exits.keySet();
-		for (Iterator iter = keys.iterator(); iter.hasNext();)
+		Set<String> keys = exits.keySet();
+		for (Iterator<String> iter = keys.iterator(); iter.hasNext();)
 			returnString += " " + iter.next();
 		return returnString;
+	}
+	
+	public ArrayList<String> arrayExits(){
+		ArrayList<String> returnArray = new ArrayList<String>();
+		Set<String> keys = exits.keySet();
+		for (Iterator<String> iter = keys.iterator(); iter.hasNext();)
+			returnArray.add(iter.next());
+		return returnArray;
 	}
 
 	/**

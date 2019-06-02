@@ -187,10 +187,11 @@ class Game {
 				|| commandWord.equals("w") || commandWord.equals("u") || commandWord.equals("d")) {
 			goRoom(command);
 		} else if (commandWord.equals("quit")) {
-			if (command.hasSecondWord())
+			if (command.hasSecondWord()) {
 				System.out.println("Quit is a one word command!");
-			else
+			}else {
 				return true; // signal that we want to quit
+			}
 		} else if (commandWord.equals("eat")) {
 			System.out
 					.println("You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
