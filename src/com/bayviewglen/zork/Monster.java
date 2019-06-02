@@ -11,9 +11,7 @@ public class Monster {
 	public Monster(Room startingRoom) {
 		currentRoom = startingRoom;
 		roomName = startingRoom.getRoomName();
-		for(int i=0; i<startingRoom.arrayExits().size(); i++) {
-			possibleDirections.add(startingRoom.arrayExits().get(i));
-		}
+		possibleDirections = startingRoom.arrayExits();
 	}
 
 	// changes rooms randomly
