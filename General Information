@@ -1,5 +1,5 @@
 General Information:
-This game is a text based horror exploration/adventure game, you as the protagonist is a teen who is waken in the night by a scratching 
+This game is a text based horror exploration/adventure game. It features you playing as the protagonist, a teen who is waken in the night by a scratching 
 noise. Through the game you will progress through your house exploring every room, in the rooms items can be found in drawers and through
 searching certain objects. As you progress through every room your goal is to find all the items you need and get out of the house. 
 The power has been cut and your only source of light will be the flashlight, the light from the flashlight is able to blind any
@@ -23,9 +23,11 @@ Items List
 
 7. Bike: Found in the shed. Broken and too heavy to carry.
 
-Death possibilities
+Death possibilities:
 Climbing out window will either cause you to be killed by the creature or fall to your death.
 Drinking bleach will end up as suicide.
 Attempting to go to to neighbors house will get you killed by creature.
-Going inside the dog house if the creature catches up will result in death.
-If flashlight is not turned on when monster is nearby it will result in death.
+Going inside the dog house if the creature is nearby will result in death.
+If the flashlight is not turned on when monster is nearby it will result in death.
+
+
