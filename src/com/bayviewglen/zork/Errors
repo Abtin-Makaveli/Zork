@@ -1,3 +1,4 @@
 Errors:
 Before I start the game I see exceptions being thrown.
 When I choose the wrong direction I get the incorrect direction message, but then errors are thrown and I cannot continue.
+Even if I go the right direction, I am faced with a bunch of errors
