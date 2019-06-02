@@ -6,10 +6,14 @@ public class Monster {
 	private Room currentRoom;
 	private ArrayList<String> possibleDirections;
 	private String direction;
+	private String roomName;
 
 	public Monster(Room startingRoom) {
 		currentRoom = startingRoom;
-		possibleDirections = startingRoom.arrayExits();
+		roomName = startingRoom.getRoomName();
+		for(int i=0; i<startingRoom.arrayExits().size(); i++) {
+			possibleDirections.add(startingRoom.arrayExits().get(i));
+		}
 	}
 
 	// changes rooms randomly
@@ -21,6 +25,7 @@ public class Monster {
 			}
 		}
 		currentRoom = currentRoom.nextRoom(direction);
+		roomName = currentRoom.getRoomName();
 	}
 
 	public boolean isNearPlayer(Room playerRoom) {

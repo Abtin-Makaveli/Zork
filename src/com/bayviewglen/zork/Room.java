@@ -49,11 +49,11 @@ class Room {
 	public Inventory getRoomInventory() {
 		return roomInventory;
 	}
-	
+
 	public void removeFromInventory(Item item) {
 		roomInventory.removeFromInventory(item);
 	}
-	
+
 	public void addToInventory(Item item) {
 		roomInventory.addToInventory(item);
 	}
@@ -122,7 +122,7 @@ class Room {
 	public String longDescription() {
 		if (roomInventory.numberOfItems() <= 0) {
 			return description;
-		}else {
+		} else {
 			return description + "\n\nIn the room you see the following:\n" + roomInventory.toStringLong();
 		}
 	}
@@ -138,13 +138,28 @@ class Room {
 			returnString += " " + iter.next();
 		return returnString;
 	}
-	
-	public ArrayList<String> arrayExits(){
-		ArrayList<String> returnArray = new ArrayList<String>();
-		Set<String> keys = exits.keySet();
-		for (Iterator<String> iter = keys.iterator(); iter.hasNext();)
-			returnArray.add(iter.next());
-		return returnArray;
+
+	public ArrayList<String> arrayExits() {
+		ArrayList<String> returnedArray = new ArrayList<String>();
+		if (exits.containsKey("north")) {
+			returnedArray.add("north");
+		}
+		if (exits.containsKey("south")) {
+			returnedArray.add("south");
+		}
+		if (exits.containsKey("east")) {
+			returnedArray.add("east");
+		}
+		if (exits.containsKey("west")) {
+			returnedArray.add("west");
+		}
+		if (exits.containsKey("up")) {
+			returnedArray.add("up");
+		}
+		if (exits.containsKey("down")) {
+			returnedArray.add("down");
+		}
+		return returnedArray;
 	}
 
 	/**

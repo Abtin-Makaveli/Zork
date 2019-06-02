@@ -95,11 +95,11 @@ class Game {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void initMonster() {
 		monster = new Monster(masterRoomMap.get("F0HALLWAY"));
 	}
-	
+
 	/**
 	 * put all the items in itemList
 	 */
@@ -195,7 +195,7 @@ class Game {
 		} else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord()) {
 				System.out.println("Quit is a one word command!");
-			}else {
+			} else {
 				return true; // signal that we want to quit
 			}
 		} else if (commandWord.equals("eat")) {
@@ -277,8 +277,10 @@ class Game {
 			Animation.doorAnimation();
 			System.out.println(currentRoom.longDescription());
 		}
-		
-		if (!command.hasSecondWord()) {
+
+		if (!command.hasSecondWord() && !command.getCommandWord().equals("n") && !command.getCommandWord().equals("s")
+				&& !command.getCommandWord().equals("e") && !command.getCommandWord().equals("w")
+				&& !command.getCommandWord().equals("u") && !command.getCommandWord().equals("d")) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Where to?");
 			return;
@@ -289,10 +291,12 @@ class Game {
 			return;
 		}
 		
+		monster.changeRooms();
 		if (monster.isNearPlayer(currentRoom)) {
 			monsterTicker++;
-			if(monsterTicker==2) {
-				System.out.println("The scrathing steadily gets louder until you turn around and are face to face with the monster\nYou only see the bloodthirsty look in its eyes before it lifts its claws and cuts your head clean off.");
+			if (monsterTicker == 2) {
+				System.out.println(
+						"The scrathing steadily gets louder until you turn around and are face to face with the monster\nYou only see the bloodthirsty look in its eyes before it lifts its claws and cuts your head clean off.");
 				System.out.println("Y O U  D I E D\nT H E  E N D\nType 'quit' to leave the game.");
 				return;
 			} else {
