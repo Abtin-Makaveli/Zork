@@ -95,7 +95,11 @@ class Game {
 			e.printStackTrace();
 		}
 	}
-
+	
+	private void initMonster() {
+		monster = new Monster(masterRoomMap.get("F0HALLWAY"));
+	}
+	
 	/**
 	 * put all the items in itemList
 	 */
@@ -135,6 +139,7 @@ class Game {
 			currentRoom = masterRoomMap.get("YOUR_ROOM");
 			playerInventory = new Inventory(30);
 			initItems();
+			initMonster();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -292,6 +297,10 @@ class Game {
 				return;
 			} else {
 				System.out.println("You start to hear an ominous scratching noise");
+			}
+		} else if (true){
+			while(monster.isNearPlayer(currentRoom)) {
+				monster.changeRooms();
 			}
 		}
 	}

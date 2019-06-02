@@ -1,6 +1,9 @@
 Room Name: Your Room
 Room Description: You are in your room, there's a window that's slightly opened to your left.<br>On your right there's an open door leading to a hallway.<br>The door behind you leads to your Bathroom
-Exit Rooms:S-Your Bathroom, E-F2Hallway
+Exit Rooms:S-Your Bathroom, E-F2Hallway, W-Window
+Room Name: Window
+Room Description: While climb through the window before realizing it's too high up to jump.<br>You slip and fall, breaking your neck. <br>Y O U  D I E D<br>T H E  E N D
+Exit Rooms:E-Your Room
 Room Name: Your Bathroom
 Room Description: You are in a bathroom, the door in front of you leads back to your room.
 Exit Rooms:N-Your Room
@@ -18,7 +21,7 @@ Room Description: You are in the attic, the trap door below you leads back to pa
 Exit Rooms:D-Parent's Room
 Room Name: Upstairs Office
 Room Description: You are in the upstairs office.<br>It seems like no one has been in this room in months.<br>The door behind you takes you back to the upstairs hallway.
-Exit Rooms:S-F2Hallway
+Exit Rooms:N-F2Hallway
 Room Name: F1Hallway
 Room Description: You are in the first floor hallway, the door in front of you leads to the garage.<br>The door to your right leads to the living room. <br>The entrance behind you leads to the kitchen.
 Exit Rooms:U-F2Hallway, D-F0Hallway, E-Living Room, S-Kitchen, N-Garage
@@ -71,5 +74,5 @@ Room Name: Dog House
 Room Description: You are in the dog house, you can only fit legs in first. <br>you managed to find a little peep hole in the door
 Exit Rooms:S-Backyard
 Room Name: Cop Patrol
-Room Description: As you get closer, you realize the lights are from a cop patrol. <br><br>The cops say you should thank your lucky stars that they found you before the monster found you. <br>You overhear them talking about how the monster has already killed your neighbors.<br><br>T H E  E N D
+Room Description: As you get closer, you realize the lights are from a cop patrol. <br><br>The cops say you should thank your lucky stars that they found you before the monster found you. <br>You overhear them talking about how the monster has already killed your neighbors.<br>Y O U  W O N<br>T H E  E N D
 Exit Rooms:S-NorthStreet
