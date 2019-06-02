@@ -32,6 +32,7 @@ class Game {
 	private Parser parser;
 	private Room currentRoom;
 	private Inventory playerInventory;
+	private Monster monster;
 
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -229,6 +230,7 @@ class Game {
 	private void goRoom(Command command) {
 		String commandWord = command.getCommandWord();
 		String direction = null;
+		int monsterTicker = 0;
 		if (commandWord.equals("n") || commandWord.equals("s") || commandWord.equals("e") || commandWord.equals("w")
 				|| commandWord.equals("u") || commandWord.equals("d")) {
 			if (commandWord.equals("n")) {
@@ -270,7 +272,7 @@ class Game {
 			Animation.doorAnimation();
 			System.out.println(currentRoom.longDescription());
 		}
-
+		
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Where to?");
@@ -280,6 +282,17 @@ class Game {
 			// there is no need to say a third word
 			System.out.println("You can only go to one place!");
 			return;
+		}
+		
+		if (monster.isNearPlayer(currentRoom)) {
+			monsterTicker++;
+			if(monsterTicker==2) {
+				System.out.println("The scrathing steadily gets louder until you turn around and are face to face with the monster\nYou only see the bloodthirsty look in its eyes before it lifts its claws and cuts your head clean off.");
+				System.out.println("Y O U  D I E D\nT H E  E N D\nType 'quit' to leave the game.");
+				return;
+			} else {
+				System.out.println("You start to hear an ominous scratching noise");
+			}
 		}
 	}
 
