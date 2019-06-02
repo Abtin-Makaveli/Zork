@@ -298,10 +298,6 @@ class Game {
 			} else {
 				System.out.println("You start to hear an ominous scratching noise");
 			}
-		} else if (true){
-			while(monster.isNearPlayer(currentRoom)) {
-				monster.changeRooms();
-			}
 		}
 	}
 
