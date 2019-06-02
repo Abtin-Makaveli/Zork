@@ -95,36 +95,29 @@ class Game {
 			e.printStackTrace();
 		}
 	}
-
+	/*
 	private void initMonster() {
 		monster = new Monster(masterRoomMap.get("F0HALLWAY"));
 	}
-
+	*/
 	/**
 	 * put all the items in itemList
 	 */
 	private void initItems() {
 		Item flashlight = new Flashlight("flashlight", 5, "An empty flashlight");
 		Item batteries = new Batteries("batteries", 2, "A twin pack of batteries");
-		Item silver_key = new GameKey("silver key", 2, "A silver mystery key");
-		Item golden_key = new GameKey("golden key", 2, "A golden mystery key");
 		Item bleach = new Bleach("bottle of bleach", 9,
 				"A bottle with it's label scratched off, but it smells strongly of bleach");
 		Item bike = new Item("bicycle", 50, "A broken bike, it doesn't look fixable");
 
 		itemList.add(flashlight);
-		masterRoomMap.get("YOUR_ROOM").addToInventory(flashlight);
+		masterRoomMap.get("UPSTAIRS_OFFICE").addToInventory(flashlight);
 		itemList.add(batteries);
-		masterRoomMap.get("UPSTAIRS_OFFICE").addToInventory(batteries);
+		masterRoomMap.get("PARENT'S_ROOM").addToInventory(batteries);
 		masterRoomMap.get("ELECTRIC_ROOM").addToInventory(batteries); // second location you can find batteries
-		itemList.add(silver_key);
-		masterRoomMap.get("LIVING_ROOM").addToInventory(silver_key);
-		itemList.add(golden_key);
-		masterRoomMap.get("FRONT_DOOR").addToInventory(golden_key);
 		itemList.add(bleach);
 		masterRoomMap.get("LAUNDRY_ROOM").addToInventory(bleach);
-		itemList.add(bleach);
-		masterRoomMap.get("DOG_HOUSE").addToInventory(bleach);
+		masterRoomMap.get("KITCHEN").addToInventory(bleach); //second location you can find bleach
 		itemList.add(bike);
 		masterRoomMap.get("SHED").addToInventory(bike);
 
@@ -139,7 +132,7 @@ class Game {
 			currentRoom = masterRoomMap.get("YOUR_ROOM");
 			playerInventory = new Inventory(30);
 			initItems();
-			initMonster();
+			//initMonster();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -290,7 +283,7 @@ class Game {
 			System.out.println("You can only go to one place!");
 			return;
 		}
-		
+		/*
 		monster.changeRooms();
 		if (monster.isNearPlayer(currentRoom)) {
 			monsterTicker++;
@@ -303,6 +296,7 @@ class Game {
 				System.out.println("You start to hear an ominous scratching noise");
 			}
 		}
+		*/
 	}
 
 	private void look() {
