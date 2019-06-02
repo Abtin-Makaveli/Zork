@@ -24,7 +24,7 @@ import com.bayviewglen.zork.Items.Item;
  * To play this game, create an instance of this class and call the "play"
  * routine.
  * 
- * This main class creates and initialises all the others: it creates all rooms,
+ * This main class creates and initializes all the others: it creates all rooms,
  * creates the parser and starts the game. It also evaluates the commands that
  * the parser returns.
  */
@@ -38,7 +38,7 @@ class Game {
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
 	// underscore -> Great Room would have a key of GREAT_ROOM
-	// In a hashmap keys are case sensitive.
+	// In a hashmap, keys are case sensitive.
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap; // room map
@@ -131,7 +131,7 @@ class Game {
 	}
 
 	/**
-	 * Create the game and initialise its internal map.
+	 * Create the game and initialize its internal map.
 	 */
 	public Game() {
 		try {

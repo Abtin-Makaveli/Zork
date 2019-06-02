@@ -1,4 +1,6 @@
 Errors:
 Before I start the game I see exceptions being thrown.
 When I choose the wrong direction I get the incorrect direction message, but then errors are thrown and I cannot continue.
-Even if I go the right direction, I am faced with a bunch of errors
+Even if I go the right direction, I am faced with a bunch of errors.
+If I try to eat flashlight, I get the message(good) but errors still pop up(bad).
+Typing take will crash the game completely.
