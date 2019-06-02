@@ -204,8 +204,6 @@ class Game {
 			inventory();
 		} else if (commandWord.equals("drop")) {
 			drop(command);
-		} else if (commandWord.equals("abtinisagod")) {
-			return true;
 		}
 		return false;
 	}
