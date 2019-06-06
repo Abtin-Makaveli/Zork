@@ -95,11 +95,11 @@ class Game {
 			e.printStackTrace();
 		}
 	}
-	/*
+	
 	private void initMonster() {
 		monster = new Monster(masterRoomMap.get("F0HALLWAY"));
 	}
-	*/
+	
 	/**
 	 * put all the items in itemList
 	 */
@@ -132,7 +132,7 @@ class Game {
 			currentRoom = masterRoomMap.get("YOUR_ROOM");
 			playerInventory = new Inventory(30);
 			initItems();
-			//initMonster();
+			initMonster();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -283,7 +283,7 @@ class Game {
 			System.out.println("You can only go to one place!");
 			return;
 		}
-		/*
+		
 		monster.changeRooms();
 		if (monster.isNearPlayer(currentRoom)) {
 			monsterTicker++;
@@ -296,7 +296,7 @@ class Game {
 				System.out.println("You start to hear an ominous scratching noise");
 			}
 		}
-		*/
+		
 	}
 
 	private void look() {
