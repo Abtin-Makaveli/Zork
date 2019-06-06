@@ -12,6 +12,8 @@ import com.bayviewglen.zork.Items.Bleach;
 import com.bayviewglen.zork.Items.Flashlight;
 import com.bayviewglen.zork.Items.GameKey;
 import com.bayviewglen.zork.Items.Item;
+import com.bayviewglen.zork.Items.Rune;
+import com.bayviewglen.zork.Items.Wine;
 
 /**
  * Class Game - the main class of the "Zork" game.
@@ -36,11 +38,14 @@ class Game {
 	private Monster monster;
 	private int monsterTicker = 0;
 
+	// items
 	private Flashlight flashlight = new Flashlight("flashlight", 5, "An empty flashlight");
 	private Batteries batteries = new Batteries("batteries", 2, "A twin pack of batteries");
 	private Bleach bleach = new Bleach("bleach", 9,
 			"A bottle with it's label scratched off, but it smells strongly of bleach");
 	private Bike bike = new Bike("bicycle", 50, "A broken bike, it doesn't look fixable");
+	private Wine wine = new Wine("wine", 5, "A bottle of wine");
+	private Rune rune = new Rune("rune", 1, "an old pebble with the tesla logo on it");
 
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -122,7 +127,10 @@ class Game {
 		masterRoomMap.get("KITCHEN").addToInventory(bleach); // second location you can find bleach
 		itemList.add(bike);
 		masterRoomMap.get("SHED").addToInventory(bike);
-
+		itemList.add(wine);
+		masterRoomMap.get("WINE_CELLAR").addToInventory(wine);
+		itemList.add(rune);
+		masterRoomMap.get("LIVING_ROOM").addToInventory(rune);
 	}
 
 	/**
@@ -194,8 +202,11 @@ class Game {
 				return true; // signal that we want to quit
 			}
 		} else if (commandWord.equals("eat")) {
-			System.out
-					.println("You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
+			if (!command.hasSecondWord()) {
+				System.out.println("Eat what?");
+			} else {
+				System.out.println("You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
+			}
 		} else if (commandWord.equals("look")) {
 			look();
 		} else if (commandWord.equals("turn") || commandWord.contentEquals("use")) {
@@ -206,6 +217,13 @@ class Game {
 			inventory();
 		} else if (commandWord.equals("drop")) {
 			drop(command);
+		} else if (commandWord.equals("summon")) {
+			summon(command);
+		} else if (commandWord.equals("drink")) {
+			drink(command);
+		} else if (commandWord.equals("suicide")) {
+			System.out.println("You scratch your wrists until they start bleeding,\nas you keep losing blood your vision dims, you wonder, why did it have to be you.\nY O U  D I E D");
+			return true;
 		}
 		return false;
 	}
@@ -397,6 +415,23 @@ class Game {
 			System.out.println("You can't do that!");
 			return;
 		}
+	}
+
+	private void summon(Command command) {
+		if (playerInventory.hasItemInInventory("rune")) {
+			if (command.getSecondWord().equals("elon") && command.getThirdWord().equals("musk")) {
+				System.out.println("The rune starts to glow brightly...\nYou blink for a second and find yourself in what look like the inside of a spaceship.\nYou see Elon Musk in front of you, wearing a spacex t-shirt.\n'I guess I saved you' he says, 'buy the new tesla roadster'\nY O U  W I N\nT H E  E N D\nType 'quit' to leave the  game, or feel free to look around the map.");
+				return;
+			}
+			System.out.println("That doesn't seem like what you should be summoning...");
+			return;
+		}
+		System.out.println("Who do you think you are, a magician?");
+		return;
+	}
+	
+	private void drink(Command command) {
+		
 	}
 
 }
