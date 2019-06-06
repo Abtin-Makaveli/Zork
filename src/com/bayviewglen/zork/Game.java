@@ -224,6 +224,8 @@ class Game {
 		} else if (commandWord.equals("suicide")) {
 			System.out.println("You scratch your wrists until they start bleeding,\nas you keep losing blood your vision dims, you wonder, why did it have to be you.\nY O U  D I E D");
 			return true;
+		} else if (commandWord.equals("leave")) {
+			System.out.println(currentRoom.exitString());
 		}
 		return false;
 	}
