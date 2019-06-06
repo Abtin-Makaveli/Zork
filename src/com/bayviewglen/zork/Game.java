@@ -362,6 +362,7 @@ class Game {
 
 	private void use(Command command) {
 		if (command.hasThirdWord() && command.getCommandWord().equals("turn") && command.getSecondWord().equals("on") && command.getThirdWord().equals("flashlight")) {
+			if (flashlight.hasBatteries())
 			flashlight.turnOn();
 		}
 	}
