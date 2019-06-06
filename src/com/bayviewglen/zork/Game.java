@@ -44,7 +44,7 @@ class Game {
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap; // room map
 	private ArrayList<Item> itemList = new ArrayList<Item>();
-	
+
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
@@ -96,11 +96,11 @@ class Game {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void initMonster() {
 		monster = new Monster(masterRoomMap.get("F0HALLWAY"));
 	}
-	
+
 	/**
 	 * put all the items in itemList
 	 */
@@ -118,7 +118,7 @@ class Game {
 		masterRoomMap.get("ELECTRIC_ROOM").addToInventory(batteries); // second location you can find batteries
 		itemList.add(bleach);
 		masterRoomMap.get("LAUNDRY_ROOM").addToInventory(bleach);
-		masterRoomMap.get("KITCHEN").addToInventory(bleach); //second location you can find bleach
+		masterRoomMap.get("KITCHEN").addToInventory(bleach); // second location you can find bleach
 		itemList.add(bike);
 		masterRoomMap.get("SHED").addToInventory(bike);
 
@@ -283,20 +283,21 @@ class Game {
 			System.out.println("You can only go to one place!");
 			return;
 		}
-		
+
 		monster.changeRooms();
 		if (monster.isNearPlayer(currentRoom)) {
 			monsterTicker++;
 			if (monsterTicker == 3) {
 				System.out.println(
 						"\nThe scrathing steadily gets louder until you turn around and are face to face with the monster\nYou only see the bloodthirsty look in its eyes before it lifts its claws and cuts your head clean off.");
-				System.out.println("Y O U  D I E D\nT H E  E N D\nType 'quit' to leave the  game, or feel free to look around the map.");
+				System.out.println(
+						"Y O U  D I E D\nT H E  E N D\nType 'quit' to leave the  game, or feel free to look around the map.");
 				return;
 			} else {
 				System.out.println("You start to hear an ominous scratching noise");
 			}
 		}
-		
+
 	}
 
 	private void look() {
