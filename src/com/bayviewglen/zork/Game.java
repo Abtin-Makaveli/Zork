@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import com.bayviewglen.zork.Items.Batteries;
+import com.bayviewglen.zork.Items.Bike;
 import com.bayviewglen.zork.Items.Bleach;
 import com.bayviewglen.zork.Items.Flashlight;
 import com.bayviewglen.zork.Items.GameKey;
@@ -34,6 +35,11 @@ class Game {
 	private Inventory playerInventory;
 	private Monster monster;
 	private int monsterTicker = 0;
+	
+	private Flashlight flashlight = new Flashlight("flashlight", 5, "An empty flashlight");
+	private Batteries batteries = new Batteries("batteries", 2, "A twin pack of batteries");
+	private Bleach bleach = new Bleach("bleach", 9, "A bottle with it's label scratched off, but it smells strongly of bleach");
+	private Bike bike = new Bike("bicycle", 50, "A broken bike, it doesn't look fixable");
 
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -105,12 +111,6 @@ class Game {
 	 * put all the items in itemList
 	 */
 	private void initItems() {
-		Item flashlight = new Flashlight("flashlight", 5, "An empty flashlight");
-		Item batteries = new Batteries("batteries", 2, "A twin pack of batteries");
-		Item bleach = new Bleach("bleach", 9,
-				"A bottle with it's label scratched off, but it smells strongly of bleach");
-		Item bike = new Item("bicycle", 50, "A broken bike, it doesn't look fixable");
-
 		itemList.add(flashlight);
 		masterRoomMap.get("UPSTAIRS_OFFICE").addToInventory(flashlight);
 		itemList.add(batteries);
@@ -361,8 +361,8 @@ class Game {
 	}
 
 	private void use(Command command) {
-		if (command.hasThirdWord() && command.getCommandWord().equals("turn")) {
-
+		if (command.hasThirdWord() && command.getCommandWord().equals("turn") && command.getSecondWord().equals("on") && command.getThirdWord().equals("flashlight")) {
+			flashlight.turnOn();
 		}
 	}
 
