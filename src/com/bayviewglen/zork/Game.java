@@ -107,7 +107,7 @@ class Game {
 	private void initItems() {
 		Item flashlight = new Flashlight("flashlight", 5, "An empty flashlight");
 		Item batteries = new Batteries("batteries", 2, "A twin pack of batteries");
-		Item bleach = new Bleach("bottle of bleach", 9,
+		Item bleach = new Bleach("bleach", 9,
 				"A bottle with it's label scratched off, but it smells strongly of bleach");
 		Item bike = new Item("bicycle", 50, "A broken bike, it doesn't look fixable");
 

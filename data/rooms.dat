@@ -29,13 +29,13 @@ Room Name: Garage
 Room Description: You are in the garage, the garage door is to your right but it seems to be locked. <br>The door behind you leads to the hallway.
 Exit Rooms:S-F1Hallway, E-Street
 Room Name: Living Room
-Room Description: You are in the living room, the door behind you leads to the front door.
+Room Description: You are in the living room, the door to your left leads to the front door.<br>You see your parents watching tv, as you walk closer,<br>you find that to your horror, their throats are slit open.
 Exit Rooms:W-F1Hallway
 Room Name: Front Door
 Room Description: You are at the front door, you notice that the key is not at the door.
 Exit Rooms:N-Living Room
 Room Name: Kitchen
-Room Description: You are in the kitchen, you notice that the oven is cooking something to the left. <br>There is also a kitchen cabinet on the right.
+Room Description: You are in the kitchen, you gag as you see the familiar shape of your dog in the oven. <br>There is also a kitchen cabinet on the right.
 Exit Rooms:N-F1Hallway
 Room Name: F0Hallway
 Room Description: You are in the basement hallway, there are four separate rooms you can enter, <br>in front of you is the basement office, <br>the room to your left is the electric room there might be batteries there, <br>the wine cellar is to the right, <br>the door behind you leads to the laundry room.
