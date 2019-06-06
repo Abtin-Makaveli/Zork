@@ -10,18 +10,19 @@ public class Monster {
 		possibleDirections = new ArrayList<String>();
 		currentRoom = startingRoom;
 		startingRoom.getRoomName();
-		for (int i = 0; i < startingRoom.arrayExits().size(); i++) {
-			possibleDirections.add(startingRoom.arrayExits().get(i));
-		}
+		possibleDirections.add("north");
+		possibleDirections.add("south");
+		possibleDirections.add("east");
+		possibleDirections.add("west");
+		possibleDirections.add("up");
+		possibleDirections.add("down");
 	}
 
 	// changes rooms randomly
 	public void changeRooms() {
-		int random = (int) (Math.random() * possibleDirections.size());
-		for (int i = 0; i < possibleDirections.size(); i++) {
-			if (random == i) {
-				direction = possibleDirections.get(i);
-			}
+		direction = roll();
+		while (currentRoom.nextRoom(direction) == null) {
+			direction = roll();
 		}
 		currentRoom = currentRoom.nextRoom(direction);
 	}
@@ -36,6 +37,16 @@ public class Monster {
 			return true;
 		}
 		return false;
+	}
+	
+	public String roll() {
+		int random = (int) (Math.random() * possibleDirections.size());
+		for (int i = 0; i < possibleDirections.size(); i++) {
+			if (random == i) {
+				direction = possibleDirections.get(i);
+			}
+		}
+		return direction;
 	}
 
 }

@@ -18,7 +18,6 @@ import java.util.Set;
 
 import com.bayviewglen.zork.Items.Item;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -139,35 +138,16 @@ class Room {
 		return returnString;
 	}
 
-	public ArrayList<String> arrayExits() {
-		ArrayList<String> returnedArray = new ArrayList<String>();
-		if (exits.containsKey("north")) {
-			returnedArray.add("north");
-		}
-		if (exits.containsKey("south")) {
-			returnedArray.add("south");
-		}
-		if (exits.containsKey("east")) {
-			returnedArray.add("east");
-		}
-		if (exits.containsKey("west")) {
-			returnedArray.add("west");
-		}
-		if (exits.containsKey("up")) {
-			returnedArray.add("up");
-		}
-		if (exits.containsKey("down")) {
-			returnedArray.add("down");
-		}
-		return returnedArray;
-	}
-
 	/**
 	 * Return the room that is reached if we go from this room in direction
 	 * "direction". If there is no room in that direction, return null.
 	 */
 	public Room nextRoom(String direction) {
-		return (Room) exits.get(direction);
+		if (direction != null && exits.get(direction) != null) {
+			return (Room) exits.get(direction);
+		} else {
+			return null;
+		}
 	}
 
 	public String getRoomName() {
