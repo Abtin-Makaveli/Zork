@@ -35,10 +35,11 @@ class Game {
 	private Inventory playerInventory;
 	private Monster monster;
 	private int monsterTicker = 0;
-	
+
 	private Flashlight flashlight = new Flashlight("flashlight", 5, "An empty flashlight");
 	private Batteries batteries = new Batteries("batteries", 2, "A twin pack of batteries");
-	private Bleach bleach = new Bleach("bleach", 9, "A bottle with it's label scratched off, but it smells strongly of bleach");
+	private Bleach bleach = new Bleach("bleach", 9,
+			"A bottle with it's label scratched off, but it smells strongly of bleach");
 	private Bike bike = new Bike("bicycle", 50, "A broken bike, it doesn't look fixable");
 
 	// This is a MASTER object that contains all of the rooms and is easily
@@ -247,6 +248,10 @@ class Game {
 		} else {
 			direction = command.getSecondWord();
 		}
+		// flashlight turn is over, turn off flashlight
+		if (flashlight.getIsOn()) {
+			flashlight.turnOff();
+		}
 		// Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
 		if (nextRoom == null) {
@@ -313,6 +318,23 @@ class Game {
 						object = currentRoom.getRoomInventory().getItem(command.getSecondWord());
 					}
 				}
+
+				if (object.getName().equals("batteries") && playerInventory.hasItemInInventory("flashlight")
+						&& object != null) {
+					currentRoom.removeFromInventory(object);
+					System.out.println("You put the batteries in the flashlight");
+					flashlight.giveBatteries();
+					return;
+				} else if (object.getName().equals("flashlight") && playerInventory.hasItemInInventory("batteries")
+						&& object != null) {
+					playerInventory.addToInventory(object);
+					currentRoom.removeFromInventory(object);
+					playerInventory.removeFromInventory(playerInventory.getItem("batteries"));
+					System.out.println("You took the flashlight and put the batteries in it");
+					flashlight.giveBatteries();
+					return;
+				}
+
 				if (playerInventory.addToInventory(object) && object != null) {
 					playerInventory.addToInventory(object);
 					currentRoom.removeFromInventory(object);
@@ -361,9 +383,19 @@ class Game {
 	}
 
 	private void use(Command command) {
-		if (command.hasThirdWord() && command.getCommandWord().equals("turn") && command.getSecondWord().equals("on") && command.getThirdWord().equals("flashlight")) {
-			if (flashlight.hasBatteries())
+		if (command.hasThirdWord() && command.getCommandWord().equals("turn") && command.getSecondWord().equals("on")
+				&& command.getThirdWord().equals("flashlight")) {
 			flashlight.turnOn();
+			monsterTicker = 0;
+			return;
+		} else if (!command.hasThirdWord() && command.getCommandWord().equals("use")
+				&& command.getSecondWord().equals("flashlight")) {
+			flashlight.turnOn();
+			monsterTicker = 0;
+			return;
+		} else {
+			System.out.println("You can't do that!");
+			return;
 		}
 	}
 

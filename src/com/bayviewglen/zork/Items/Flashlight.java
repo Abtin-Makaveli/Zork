@@ -21,11 +21,21 @@ public class Flashlight extends Item {
 	}
 
 	public void turnOn() {
-		if (numBatteries < 0) {
+		if (isOn) {
+			System.out.println("\nFlashlight is already on!");
+		} else if (numBatteries > 0) {
 			isOn = true;
 			numBatteries--;
 			super.setDescription("A flashlight with " + numBatteries + " charges left");
+			System.out.println("\nYou turned on the flashlight");
+		} else {
+			System.out.println("\nYou don't have any batteries");
 		}
+	}
+	
+	public void turnOff() {
+		isOn = false;
+		System.out.println("The flashlight turned off");
 	}
 
 	public boolean getIsOn() {
