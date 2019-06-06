@@ -290,7 +290,7 @@ class Game {
 			if (monsterTicker == 3) {
 				System.out.println(
 						"\nThe scrathing steadily gets louder until you turn around and are face to face with the monster\nYou only see the bloodthirsty look in its eyes before it lifts its claws and cuts your head clean off.");
-				System.out.println("Y O U  D I E D\nT H E  E N D\nType 'quit' to leave the game.");
+				System.out.println("Y O U  D I E D\nT H E  E N D\nType 'quit' to leave the  game, or feel free to look around the map.");
 				return;
 			} else {
 				System.out.println("You start to hear an ominous scratching noise");
