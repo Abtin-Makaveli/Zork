@@ -68,11 +68,11 @@ Room Name: Neighbors House
 Room Description: You are on your neighbors front porch you can see the bell on the right of the door.
 Exit Rooms:W-SouthStreet
 Room Name: Shed
-Room Description: You are in the shed, there is a rusty shovel to your left and there is a dog house behind you.
+Room Description: You are in the shed, everything is rusty.
 Exit Rooms:E-Backyard
 Room Name: Dog House
 Room Description: You are in the dog house, you can only fit legs in first. <br>you managed to find a little peep hole in the door
 Exit Rooms:S-Backyard
 Room Name: Cop Patrol
-Room Description: As you get closer, you realize the lights are from a cop patrol. <br><br>The cops say you should thank your lucky stars that they found you before the monster found you. <br>You overhear them talking about how the monster has already killed your neighbors.<br>Y O U  W O N<br>T H E  E N D<br>Type 'quit' to leave the  game, or feel free to look around the map.
+Room Description: As you get closer, you realize the lights are from a cop patrol. <br>The cops say you should thank your lucky stars that they found you before the monster found you. <br>You overhear them talking about how the monster has already killed your neighbors.<br>Y O U  W O N<br>T H E  E N D<br>Type 'quit' to leave the  game, or feel free to look around the map.
 Exit Rooms:S-NorthStreet

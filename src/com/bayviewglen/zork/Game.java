@@ -45,7 +45,8 @@ class Game {
 			"A bottle with it's label scratched off, but it smells strongly of bleach");
 	private Bike bike = new Bike("bicycle", 50, "A broken bike, it doesn't look fixable");
 	private Wine wine = new Wine("wine", 5, "A bottle of wine");
-	private Rune rune = new Rune("rune", 1, "an old pebble with the tesla logo on it");
+	private Rune rune = new Rune("rune", 1, "An old rune with the tesla logo on it");
+	private Item pizza = new Item("pizza", 2, "A dusty slice of pizza");
 
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -131,6 +132,8 @@ class Game {
 		masterRoomMap.get("WINE_CELLAR").addToInventory(wine);
 		itemList.add(rune);
 		masterRoomMap.get("LIVING_ROOM").addToInventory(rune);
+		itemList.add(pizza);
+		masterRoomMap.get("BACKYARD").addToInventory(pizza);
 	}
 
 	/**
