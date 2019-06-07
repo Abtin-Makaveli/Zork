@@ -10,7 +10,6 @@ import com.bayviewglen.zork.Items.Batteries;
 import com.bayviewglen.zork.Items.Bike;
 import com.bayviewglen.zork.Items.Bleach;
 import com.bayviewglen.zork.Items.Flashlight;
-import com.bayviewglen.zork.Items.GameKey;
 import com.bayviewglen.zork.Items.Item;
 import com.bayviewglen.zork.Items.Rune;
 import com.bayviewglen.zork.Items.Wine;
