@@ -37,6 +37,7 @@ class Game {
 	private Inventory playerInventory;
 	private Monster monster;
 	private int monsterTicker = 0;
+	private boolean isSitting = false;
 
 	// items
 	private Flashlight flashlight = new Flashlight("flashlight", 5, "An empty flashlight");
@@ -205,7 +206,8 @@ class Game {
 			if (!command.hasSecondWord()) {
 				System.out.println("Eat what?");
 			} else {
-				System.out.println("You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
+				System.out.println(
+						"You stop yourself before taking a bite, \"now is not the time\" you think to yourself.");
 			}
 		} else if (commandWord.equals("look")) {
 			look();
@@ -221,11 +223,48 @@ class Game {
 			summon(command);
 		} else if (commandWord.equals("drink")) {
 			drink(command);
-		} else if (commandWord.equals("suicide")) {
-			System.out.println("You scratch your wrists until they start bleeding,\nas you keep losing blood your vision dims, you wonder, why did it have to be you.\nY O U  D I E D");
+		} else if (commandWord.equals("suicide")
+				|| (commandWord.equals("kill") && command.getSecondWord().equals("yourself"))) {
+			System.out.println(
+					"You scratch your wrists until they start bleeding,\nas you keep losing blood your vision dims, you wonder, why did it have to be you.\nY O U  D I E D");
 			return true;
 		} else if (commandWord.equals("leave")) {
 			System.out.println(currentRoom.exitString());
+		} else if (commandWord.equals("shout")) {
+			System.out.println(
+					"You try your best to do angriest most menacing shout,\nYou hear scuttering, you don't know if thats a good or bad thing yet...");
+			if (monsterTicker > 0) {
+				monsterTicker--;
+			}
+		} else if (commandWord.equals("scream")) {
+			System.out.println(
+					"You let out a loud scream,\nYou hear the scratching get louder, you don't know if thats a good or bad thing yet...");
+			if (monsterTicker < 3) {
+				monsterTicker++;
+			}
+		} else if (commandWord.equals("hide")) {
+			System.out.println("You rush to hide behind anything close to you.");
+			if (monsterTicker > 0) {
+				monsterTicker--;
+			}
+		} else if (commandWord.equals("talk")) {
+			talk();
+		} else if (commandWord.equals("sit")) {
+			if (!command.hasSecondWord() && isSitting == false) {
+				System.out.println("You sit in a power pose garunteed to scare away any monster.");
+				isSitting = true;
+			} else if (isSitting) {
+				System.out.println("You are already sitting!");
+			} else {
+				System.out.println("That's not how it's done!");
+			}
+		} else if (commandWord.equals("get")) {
+			if (command.getSecondWord().equals("up") && isSitting == true) {
+				System.out.println("You get up from your comfortable position.");
+				isSitting = false;
+			} else {
+				System.out.println("You can only get up if you are sitting!");
+			}
 		}
 		return false;
 	}
@@ -248,81 +287,85 @@ class Game {
 	 * otherwise print an error message.
 	 */
 	private void goRoom(Command command) {
-		String commandWord = command.getCommandWord();
-		String direction = null;
-		if (commandWord.equals("n") || commandWord.equals("s") || commandWord.equals("e") || commandWord.equals("w")
-				|| commandWord.equals("u") || commandWord.equals("d")) {
-			if (commandWord.equals("n")) {
-				direction = "north";
-			} else if (commandWord.equals("s")) {
-				direction = "south";
-			} else if (commandWord.equals("e")) {
-				direction = "east";
-			} else if (commandWord.equals("w")) {
-				direction = "west";
-			} else if (commandWord.equals("u")) {
-				direction = "up";
-			} else if (commandWord.equals("d")) {
-				direction = "down";
+		if (!isSitting) {
+			String commandWord = command.getCommandWord();
+			String direction = null;
+			if (commandWord.equals("n") || commandWord.equals("s") || commandWord.equals("e") || commandWord.equals("w")
+					|| commandWord.equals("u") || commandWord.equals("d")) {
+				if (commandWord.equals("n")) {
+					direction = "north";
+				} else if (commandWord.equals("s")) {
+					direction = "south";
+				} else if (commandWord.equals("e")) {
+					direction = "east";
+				} else if (commandWord.equals("w")) {
+					direction = "west";
+				} else if (commandWord.equals("u")) {
+					direction = "up";
+				} else if (commandWord.equals("d")) {
+					direction = "down";
+				}
+			} else {
+				direction = command.getSecondWord();
 			}
-		} else {
-			direction = command.getSecondWord();
-		}
-		// flashlight turn is over, turn off flashlight
-		if (flashlight.getIsOn()) {
-			flashlight.turnOff();
-		}
-		// Try to leave current room.
-		Room nextRoom = currentRoom.nextRoom(direction);
-		if (nextRoom == null) {
-			System.out.println("There's nothing that way!");
-		} else if (currentRoom.isStairs(currentRoom, currentRoom.nextRoom(direction))) {
-			currentRoom = nextRoom;
-			Animation.stairAnimation();
-			System.out.println(currentRoom.longDescription());
-		} else if (currentRoom.nextRoom(direction).getRoomName().equals("Attic")) {
-			currentRoom = nextRoom;
-			Animation.atticAnimation();
-			System.out.println(currentRoom.longDescription());
-		} else if (currentRoom.nextRoom(direction).getRoomName().equals("Cop Patrol")) {
-			currentRoom = nextRoom;
-			Animation.copAnimation();
-			System.out.println(currentRoom.longDescription());
-			System.out.println("Type 'quit' to leave the  game, or feel free to look around the map.");
-			return;
-		} else {
-			currentRoom = nextRoom;
-			Animation.doorAnimation();
-			System.out.println(currentRoom.longDescription());
-		}
-
-		if (!command.hasSecondWord() && !command.getCommandWord().equals("n") && !command.getCommandWord().equals("s")
-				&& !command.getCommandWord().equals("e") && !command.getCommandWord().equals("w")
-				&& !command.getCommandWord().equals("u") && !command.getCommandWord().equals("d")) {
-			// if there is no second word, we don't know where to go...
-			System.out.println("Where to?");
-			return;
-		}
-		if (command.hasThirdWord()) {
-			// there is no need to say a third word
-			System.out.println("You can only go to one place!");
-			return;
-		}
-
-		monster.changeRooms();
-		if (monster.isNearPlayer(currentRoom)) {
-			monsterTicker++;
-			if (monsterTicker == 3) {
-				System.out.println(
-						"\nThe scrathing steadily gets louder until you turn around and are face to face with the monster\nYou only see the bloodthirsty look in its eyes before it lifts its claws and cuts your head clean off.");
-				System.out.println(
-						"Y O U  D I E D\nT H E  E N D\nType 'quit' to leave the  game, or feel free to look around the map.");
+			// flashlight turn is over, turn off flashlight
+			if (flashlight.getIsOn()) {
+				flashlight.turnOff();
+			}
+			// Try to leave current room.
+			Room nextRoom = currentRoom.nextRoom(direction);
+			if (nextRoom == null) {
+				System.out.println("There's nothing that way!");
+			} else if (currentRoom.isStairs(currentRoom, currentRoom.nextRoom(direction))) {
+				currentRoom = nextRoom;
+				Animation.stairAnimation();
+				System.out.println(currentRoom.longDescription());
+			} else if (currentRoom.nextRoom(direction).getRoomName().equals("Attic")) {
+				currentRoom = nextRoom;
+				Animation.atticAnimation();
+				System.out.println(currentRoom.longDescription());
+			} else if (currentRoom.nextRoom(direction).getRoomName().equals("Cop Patrol")) {
+				currentRoom = nextRoom;
+				Animation.copAnimation();
+				System.out.println(currentRoom.longDescription());
+				System.out.println("Type 'quit' to leave the  game, or feel free to look around the map.");
 				return;
 			} else {
-				System.out.println("You start to hear an ominous scratching noise");
+				currentRoom = nextRoom;
+				Animation.doorAnimation();
+				System.out.println(currentRoom.longDescription());
 			}
-		}
 
+			if (!command.hasSecondWord() && !command.getCommandWord().equals("n")
+					&& !command.getCommandWord().equals("s") && !command.getCommandWord().equals("e")
+					&& !command.getCommandWord().equals("w") && !command.getCommandWord().equals("u")
+					&& !command.getCommandWord().equals("d")) {
+				// if there is no second word, we don't know where to go...
+				System.out.println("Where to?");
+				return;
+			}
+			if (command.hasThirdWord()) {
+				// there is no need to say a third word
+				System.out.println("You can only go to one place!");
+				return;
+			}
+
+			monster.changeRooms();
+			if (monster.isNearPlayer(currentRoom)) {
+				monsterTicker++;
+				if (monsterTicker == 3) {
+					System.out.println(
+							"\nThe scrathing steadily gets louder until you turn around and are face to face with the monster\nYou only see the bloodthirsty look in its eyes before it lifts its claws and cuts your head clean off.");
+					System.out.println(
+							"Y O U  D I E D\nT H E  E N D\nType 'quit' to leave the  game, or feel free to look around the map.");
+					return;
+				} else {
+					System.out.println("You start to hear an ominous scratching noise");
+				}
+			}
+		} else {
+			System.out.println("You need to stand up to go anywhere!");
+		}
 	}
 
 	private void look() {
@@ -422,7 +465,8 @@ class Game {
 	private void summon(Command command) {
 		if (playerInventory.hasItemInInventory("rune")) {
 			if (command.getSecondWord().equals("elon") && command.getThirdWord().equals("musk")) {
-				System.out.println("The rune starts to glow brightly...\nYou blink for a second and find yourself in what look like the inside of a spaceship.\nYou see Elon Musk in front of you, wearing a spacex t-shirt.\n'I guess I saved you' he says, 'buy the new tesla roadster'\nY O U  W I N\nT H E  E N D\nType 'quit' to leave the  game, or feel free to look around the map.");
+				System.out.println(
+						"The rune starts to glow brightly...\nYou blink for a second and find yourself in what look like the inside of a spaceship.\nYou see Elon Musk in front of you, wearing a spacex t-shirt.\n'I guess I saved you' he says, 'buy the new tesla roadster'\nY O U  W I N\nT H E  E N D\nType 'quit' to leave the  game, or feel free to look around the map.");
 				return;
 			}
 			System.out.println("That doesn't seem like what you should be summoning...");
@@ -431,9 +475,28 @@ class Game {
 		System.out.println("Who do you think you are, a magician?");
 		return;
 	}
-	
+
 	private void drink(Command command) {
-		
+		if (!command.hasThirdWord() && command.hasSecondWord()) {
+			if (command.getSecondWord().equals("wine")) {
+				System.out.println(
+						"You drink and drink until the bottle is empty,\nAfter finishing you lose focus and keep seeing text saying:\nsS    u mm on   El  o  n   mus  K");
+				return;
+			}
+			if (command.getSecondWord().equals("bleach")) {
+				System.out.println(
+						"You drink the bleach and instantly fall with a terrible pain in your stomach.\nY O U  D I E D\nType 'quit' to leave the  game, or feel free to look around the map.");
+				return;
+			}
+			System.out.println("You cant drink that!");
+			return;
+		}
+		System.out.println("Drink what?");
+	}
+
+	private void talk() {
+		System.out.println(
+				"'Hello?' you say in a weak voice\n'From the other side' says the monster with an evil grin, doing his best adele impression.\nY O U  D I E D\nType 'quit' to leave the  game, or feel free to look around the map.");
 	}
 
 }
